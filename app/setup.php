@@ -42,6 +42,15 @@ add_action('enqueue_block_editor_assets', function () {
     wp_enqueue_style('sage/editor.css', asset('styles/editor.css')->uri(), false, null);
 }, 100);
 
+/*
+* Register the theme admin assets.
+*
+* @return void
+*/
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('ssm/admin', asset('styles/admin.css')->uri(), false, null);
+}, 100);
+
 /**
  * Register the initial theme setup.
  *

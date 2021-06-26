@@ -28,6 +28,7 @@ mix.webpackConfig({
 });
 
 mix.sass('resources/assets/styles/app.scss', 'styles')
+   .sass('resources/assets/styles/admin.scss', 'styles');
 
 mix.js('resources/assets/scripts/app.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')
