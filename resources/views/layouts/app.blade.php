@@ -1,15 +1,21 @@
-@include('partials.header')
+<div class="off-canvas-wrapper">
 
-<div class="container">
-  <main class="main">
-    @yield('content')
-  </main>
+	@include('partials.offcanvas')
 
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
+	<div class="off-canvas-content" data-off-canvas-content>
+		
+		@include('partials.header')
+
+		<div class="container">
+
+			<main class="content" id="main">
+				@yield('content')
+			</main>
+
+		</div>
+
+		@include('partials.footer')
+
+	</div>
+
 </div>
-
-@include('partials.footer')
