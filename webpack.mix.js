@@ -17,12 +17,17 @@ require('laravel-mix-copy-watched');
 mix.setPublicPath('./dist')
    .browserSync('sage.test');
 
+sageFolder = path.resolve(__dirname, './node_modules');
+staticFolder = path.resolve(__dirname, './static/node_modules');
+
+mix.webpackConfig({
+  resolve: {
+    modules: [sageFolder, staticFolder],
+    extensions: ['.js, .scss, .css'],
+  }
+});
+
 mix.sass('resources/assets/styles/app.scss', 'styles')
-   .sass('resources/assets/styles/editor.scss', 'styles')
-   .purgeCss({
-     whitelist: require('purgecss-with-wordpress').whitelist,
-     whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
-   });
 
 mix.js('resources/assets/scripts/app.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')

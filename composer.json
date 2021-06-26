@@ -38,9 +38,18 @@
       "App\\": "app/"
     }
   },
+  "extra": {
+    "installer-paths": {
+      "theme-boilerplate/": ["ssm/theme-boilerplate"],
+      "static/": ["ssm/static-boilerplate"]
+    }
+  },
   "require": {
     "php": "^7.2.5",
-    "roots/acorn": "^1.0.1"
+    "roots/acorn": "^1.0.1",
+    "ssm/core": "dev-master",
+    "ssm/static-boilerplate": "dev-master",
+    "ssm/theme-boilerplate": "dev-master"
   },
   "require-dev": {
     "filp/whoops": "^2.7",

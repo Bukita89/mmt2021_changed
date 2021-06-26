@@ -4,8 +4,21 @@
     "extends @wordpress/browserslist-config"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=development run-s mix",
-    "build:production": "cross-env NODE_ENV=production run-s clean mix",
+    "build": "cross-env NODE_ENV=development run-s assets static-copy mix",
+    "build:production": "cross-env NODE_ENV=production run-s assets static-copy clean mix",
+    "build:theme": "cross-env NODE_ENV=development run-s clean mix",
+    "build:theme:production": "cross-env NODE_ENV=production run-s clean mix",
+    "static-install": "yarn --cwd ./static install",
+    "static-build": "yarn --cwd ./static build",
+    "static-start": "yarn --cwd ./static start",
+    "static-copy": "run-p static-copy:*",
+    "static-copy:styles": "ncp ./static/src/assets/styles ./resources/assets/styles",
+    "static-copy:scripts": "ncp ./static/src/assets/scripts ./resources/assets/scripts",
+    "static-copy:fonts": "ncp ./static/src/assets/fonts ./resources/assets/fonts",
+    "static-copy:video": "ncp ./static/src/assets/video ./resources/assets/video",
+    "static-copy:images": "ncp ./static/src/assets/images ./resources/assets/images",
+    "assets": "run-s assets:*",
+    "assets:clean": "rimraf resources/assets/scripts/app.js resources/assets/fonts/* resources/assets/styles/* resources/assets/video/* resources/assets/images/*",
     "start": "cross-env NODE_ENV=development run-s \"mix -- --watch\"",
     "hot": "cross-env NODE_ENV=development run-s build mix:hot",
     "mix": "webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -43,11 +56,24 @@
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "ncp": "^2.0.0"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "jquery": "^3.5.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "foundation-sites": "^6.5.1",
+    "jquery": "^3.4.1",
+    "motion-ui": "^2.0.3",
+    "what-input": "^5.1.2",
+    "chalk": "^2.4.1",
+    "cli-spinner": "^0.2.8",
+    "commander": "^2.15.1",
+    "del": "^3.0.0",
+    "mkdirp": "^0.5.1",
+    "fs": "0.0.1-security",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
+    "slick-carousel": "^1.8.1"
   }
 }
