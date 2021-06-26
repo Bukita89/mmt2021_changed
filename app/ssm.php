@@ -19,10 +19,10 @@ add_filter( 'sober/bundle/file', function () {
 add_action( 'admin_menu', function () {
 
     add_menu_page(
-        "Secret Stache",
-        "Secret Stache",
+        "Momenta",
+        "Momenta",
         "manage_options",
-        "ssm",
+        "mmt",
         "",
         "dashicons-layout",
         5
@@ -33,8 +33,8 @@ add_action( 'admin_menu', function () {
 /**
  * Remove first SSM submenu item
  */
-add_action( 'admin_init', function () {
-    remove_submenu_page("ssm", "ssm");
+add_action( 'admin_menu', function () {
+    remove_submenu_page("mmt", "mmt");
 }, 99);
 
 /**
@@ -48,7 +48,7 @@ add_action( 'init', function() {
         acf_add_options_sub_page( array(
             "page_title" => "Brand Settings",
             "menu_title" => "Brand Settings",
-            "parent_slug" => "ssm",
+            "parent_slug" => "mmt",
 		));
 
     }

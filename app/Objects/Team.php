@@ -13,7 +13,7 @@ add_action( 'init', function() {
         "menu_icon"         => "dashicons-groups",
         "menu_position"		=> 5,
         "supports" 			=> array( "title", "thumbnail" ),
-        "show_in_menu"      => "ssm",
+        "show_in_menu"      => "mmt",
         "has_archive"       => "team",
         "public"            => false,
         "show_ui"           => true,
