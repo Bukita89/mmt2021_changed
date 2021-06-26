@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'preflight' => env('WP_ENV', 'production') !== 'production',
+    'preflight' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -129,6 +129,7 @@ return [
          * Application Service Providers
          */
         App\Providers\ThemeServiceProvider::class,
+        SSM\Console\SetupServiceProvider::class
     ],
 
     /*

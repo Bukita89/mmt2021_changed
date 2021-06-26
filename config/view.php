@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'compiled' => get_theme_file_path('/storage/framework/views'),
+    'compiled' => ( function_exists( 'is_wpe' ) && (boolean)is_wpe() ) ? '/tmp/sage-cache' : get_theme_file_path('/storage/framework/views'),
 
     /*
     |--------------------------------------------------------------------------

@@ -48,6 +48,15 @@ add_action('enqueue_block_editor_assets', function () {
  * @return void
  */
 add_action('after_setup_theme', function () {
+
+    /**
+     * Enable SSM features
+     */
+    add_theme_support('ssm-admin-cleanup');
+    add_theme_support('ssm-public-setup');
+    add_theme_support('ssm-white-label');
+    add_theme_support('ssm-options-page');
+    
     /**
      * Enable features from Soil when plugin is activated
      * @link https://roots.io/plugins/soil/
