@@ -1,0 +1,37 @@
+<section class="hero-unit{{#ifequal hero_unit_option 'bg_color'}} bg-{{hero_unit_bg_color}}{{/ifequal}}{{#ifequal hero_unit_option 'bg_image'}} bg-image{{/ifequal}} {{#ifequal hero_unit_option 'bg_video'}} bg-video{{/ifequal}} {{hero_classes}}" {{#ifequal hero_unit_option 'bg_image'}} style="background-image: url({{hero_unit_bg_image}})" {{/ifequal}}>
+    {{#ifequal hero_unit_option 'bg_image'}}
+        <div class="overlay"></div>
+    {{/ifequal}}
+
+    {{#ifequal hero_unit_option 'bg_video'}}
+        <div class="overlay"></div>
+        <div class="video-overlay">
+            <video muted autoplay playsinline loop>
+                <source src="{{root}}assets/video/PlaceholderVideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    {{/ifequal}}
+
+    <div class="grid-container">
+
+        <div class="hero-unit-content">
+            {{#if hero_unit_headline}}
+                <h1 class="headline">{{{hero_unit_headline}}}</h1>
+            {{/if}}
+            {{#if hero_unit_subheadline }}
+                <h2 class="subheadline">{{{hero_unit_subheadline}}}</h2>
+            {{/if}}
+
+            {{#if show_hero_unit_text }}
+               <div class="hero-unit-text">
+                   {{{show_hero_unit_text}}}
+               </div>
+            {{/if}}
+
+            {{#if show_hero_unit_button}}
+               <a href="{{root}}{{hero_unit_button_url}}" class="button">{{hero_unit_button_text}}</a>
+            {{/if}}
+        </div>
+
+    </div>
+</section>
