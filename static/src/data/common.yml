@@ -1,36 +1,28 @@
 brandname: Secret Stache Media
-logo:
+logo: assets/images/cms/logo.svg
 copyright: Copyright &copy; Secret Stache Media 2018. All Rights Reserved.
 
 primary-navigation:
-  - 
-    link: "index"
-    text: Home
-  - 
-    link: "about"
-    text: About
-    submenu: true
-    submenu-items:
-      -
-        submenu-link: "team"
-        submenu-text: Our Team
-      -
-        submenu-link: "culture"
-        submenu-text: Our Culture
-      -
-        submenu-link: "jobs"
-        submenu-text: Available Jobs
-  - 
-    link: "servives"
+  -
+    link: "services"
     text: Services
+  -
+    link: "who-we-are"
+    text: Who We Are
+  -
+    link: "blog"
+    text: Blog
+  -
+    link: "#"
+    text: Start Moving
 
 footer-navigation:
-  - 
+  -
     link: "index"
     text: Home
-  - 
+  -
     link: "about"
     text: About
-  - 
+  -
     link: "servives"
-    text: Services  
+    text: Services

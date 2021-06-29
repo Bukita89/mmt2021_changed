@@ -1,3 +1,52 @@
+.site-header {
+    .primary-navigation {
+        ul {
+            > li {
+                margin-right: rem-calc(32);
+
+                &:last-child {
+                    margin-right: 0 !important;
+                }
+
+                a {
+                    font-size: rem-calc(20);
+                    font-weight: 700;
+                    padding: rem-calc(8);
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        height: 1px;
+                        background: color('blue');
+                        transition: width $tr/2;
+                        width: 0;
+                    }
+
+                    &:hover {
+                        &:before {
+                            width: calc(100% - 1rem);
+                        }
+                    }
+                }
+
+                &.current-menu-item {
+                    a {
+                        color: color('blue');
+
+                        &:before {
+                            width: calc(100% - 1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .dropdown.menu>li>a,
 .dropdown.menu>li.is-active>a,
 .menu .active>a {
@@ -43,7 +92,7 @@
             transition: opacity 0.3s ease-in, transform 0.3s ease-in, visibility 0.3s ease-in;
         }
 
-        //active state            
+        //active state
         &.is-active {
            ul {
                opacity: 1;

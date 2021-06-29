@@ -1,9 +1,36 @@
 .site-header {
-    padding: rem-calc(20 0);
-    position: sticky;
+    padding: rem-calc(40 0);
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
-    background: color('white');
+    background: none;
     z-index: 9998;
+    height: rem-calc(140);
+    transition: background-color $tr/2, height $tr/2, padding $tr/2;
+
+    .brand {
+        max-height: rem-calc(60);
+        transition: max-height $tr/2;
+        display: flex;
+
+        svg {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &.sticky {
+        background: color('black-light');
+        padding: rem-calc(24 0);
+        height: rem-calc(96);
+
+        .brand {
+            max-height: rem-calc(48);
+        }
+    }
+
+    .primary-navigation {
+        margin-left: rem-calc(42);
+    }
 }

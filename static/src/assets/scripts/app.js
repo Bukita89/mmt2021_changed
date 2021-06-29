@@ -21,6 +21,7 @@ $(function() {
     const header = document.querySelector('.site-header');
     var sticky = header.offsetTop;
 
+    stickyHeader();
     function stickyHeader() {
         if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
@@ -30,7 +31,7 @@ $(function() {
     }
     /* end Sticky header */
 
-    
+
     /* Hamburger click handle */
     $('.hamburger').on('click', function() {
         $('body').toggleClass('offcanvas-active');

@@ -1,5 +1,8 @@
 section.hero-unit {
     position: relative;
+    min-height: rem-calc(800);
+    display: flex;
+    align-items: center;
 
     .grid-container {
         position: relative;

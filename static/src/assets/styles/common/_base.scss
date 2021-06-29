@@ -12,7 +12,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: color('white');
+    background: color('black-light');
     color: color('text');
     font-family: fontFamily('body');
     font-weight: normal;
@@ -52,15 +52,15 @@ p {
 small {
     font-size: 80%;
 }
-  
+
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; 
-  font-size: 100%; 
-  margin: 0; 
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
 }
 
 button {
@@ -70,8 +70,8 @@ button {
 }
 
 [type="search"] {
-    -webkit-appearance: textfield; 
-    outline-offset: -2px; 
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
 
     &::-webkit-search-decoration {
         -webkit-appearance: none;
@@ -79,6 +79,6 @@ button {
 }
 
 ::-webkit-file-upload-button {
-    -webkit-appearance: button; 
+    -webkit-appearance: button;
     font: inherit;
 }
