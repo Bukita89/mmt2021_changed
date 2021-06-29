@@ -13,6 +13,7 @@ use App\Fields\Modules\Gallery;
 use App\Fields\Modules\Accordion;
 use App\Fields\Modules\DataDisplay;
 use App\Fields\Modules\Table;
+use App\Fields\Modules\ImageCarousel;
 
 class Modules {
 
@@ -34,15 +35,15 @@ class Modules {
 
                 ->addLayout(TextEditor::getFields())
 
-                ->addLayout(Buttons::getFields())
+               ->addLayout(Image::getFields())
 
-                ->addLayout(Image::getFields())
+               ->addLayout(ImageCarousel::getFields())
 
                 ->addLayout(Video::getFields())
 
                 ->addLayout(Form::getFields())
 
-                ->addLayout(Accordion::getFields())
+                ->addLayout(Buttons::getFields())
 
             ->endFlexibleContent();
 

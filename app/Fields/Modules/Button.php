@@ -20,7 +20,7 @@ class Button {
         $buttonModule = new FieldsBuilder('button', [
             'title'	=>	'Button'
         ]);
-        
+
         $buttonModule
 
             ->addTab('Content')
@@ -28,6 +28,14 @@ class Button {
                 ->addFields(ButtonComponent::getFields())
 
             ->addTab('Options')
+
+                ->addRadio('layout', [
+                    'label'         => 'Layout',
+                    'layout'        => 'horizontal',
+                    'default_value' => 'wide',
+                ])
+                    ->addChoice('wide', 'Wide')
+                    ->addChoice('thin-card', 'Thin Card')
 
                 ->addFields(ButtonDefaults::getFields())
 
