@@ -60,10 +60,6 @@ add_action( 'init', function() {
  */
 add_filter( 'display_post_states', function( $post_states, $post ) {
 
-    if( get_page_template_slug( $post ) == 'template-landing-page.blade.php' ) {
-        $post_states[] = 'Landing Page';
-    }
-
     if( get_page_template_slug( $post ) == 'template-blog-page.blade.php' ) {
         $post_states[] = 'Blog Page';
     }

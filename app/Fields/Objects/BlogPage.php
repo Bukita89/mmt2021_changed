@@ -19,7 +19,7 @@ class BlogPage {
 
 		$blogPageInfo
 
-            ->addPostObject('blog_page_featured_post', [
+            ->addPostObject('blog_featured_post', [
                 'label'         => 'Featured Post',
                 'post_type'     => ['post'],
                 'return_format' => 'id',

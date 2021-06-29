@@ -44,6 +44,7 @@ class LayoutBuilder {
                 ->addLayout(InstagramFeed::getFields())
 
 			->setLocation('post_type', '==', 'page')
+				->and('page_template', '!=', 'template-blog-page.blade.php')
 				->or('post_type', '==', 'post')
 				->or('post_type', '==', 'ssm_team_member');
 

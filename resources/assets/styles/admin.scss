@@ -13,3 +13,10 @@
 #categorydiv {
 display: none;
 }
+
+div[data-name="primary_phone_number"] .intl-tel-input {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}

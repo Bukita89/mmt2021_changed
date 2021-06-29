@@ -38,7 +38,13 @@ class Shared {
                     'label'    => 'Subheadline'
                 ])
 
-                ->addFields(Button::getFields( ))
+				->addGroup('home_button', [
+					'label'	   => 'Button'
+				])
+
+                	->addFields(Button::getFields( ))
+
+				->endGroup()
 
 			->addTab('Options')
 
@@ -93,43 +99,12 @@ class Shared {
 				->addFields(HtmlAttributes::getFields())
 
             ->setLocation('page_template', '==', 'default')
+				->and('page_template', '!=', 'template-blog-page.blade.php')
                 ->and('page_type', '!=', 'front_page');
 
 		// Register Inner Hero Unit
 		add_action('acf/init', function() use ($innerHeroUnit) {
 			acf_add_local_field_group($innerHeroUnit->build());
-		});
-
-
-        /**
-		 * Hero Unit
-		 * @author Rich Staats <rich@secretstache.com>
-		 * @since 3.0.0
-		 * @todo Link to Team Snippet Code
-		 */
-		$heroUnit = new FieldsBuilder('hero_unit', [
-			'position' => 'acf_after_title'
-		]);
-
-		$heroUnit
-
-			->addTab('Content')
-
-				->addFields(Header::getFields())
-
-			->addTab('Options')
-
-				->addFields(Background::getFields())
-
-				->addFields(HtmlAttributes::getFields())
-
-			->setLocation('post_type', '==', 'page')
-                ->and('page_type', '!=', 'front_page')
-                ->and('page_template', '!=', 'default');
-
-		// Register Hero Unit
-		add_action('acf/init', function() use ($heroUnit) {
-			acf_add_local_field_group($heroUnit->build());
 		});
 
 		/**
