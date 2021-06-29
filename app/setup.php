@@ -49,6 +49,15 @@ add_action('enqueue_block_editor_assets', function () {
 */
 add_action('admin_enqueue_scripts', function () {
     wp_enqueue_style('ssm/admin', asset('styles/admin.css')->uri(), false, null);
+    }, 100);
+
+/*
+* Register the theme admin assets.
+*
+* @return void
+*/
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_style('ssm/admin', asset('styles/admin.css')->uri(), false, null);
 }, 100);
 
 /**
@@ -65,7 +74,7 @@ add_action('after_setup_theme', function () {
     add_theme_support('ssm-public-setup');
     add_theme_support('ssm-white-label');
     add_theme_support('ssm-options-page');
-    
+
     /**
      * Enable features from Soil when plugin is activated
      * @link https://roots.io/plugins/soil/
@@ -86,7 +95,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'offcanvas_navigation' => __('Offcanvas Navigation', 'sage'),
+        'footer_navigation' => __('Footer Navigation', 'sage')
     ]);
 
     /**

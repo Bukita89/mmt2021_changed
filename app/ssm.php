@@ -52,7 +52,7 @@ add_action( 'init', function() {
 		));
 
     }
-    
+
 });
 
 /**
@@ -62,6 +62,10 @@ add_filter( 'display_post_states', function( $post_states, $post ) {
 
     if( get_page_template_slug( $post ) == 'template-landing-page.blade.php' ) {
         $post_states[] = 'Landing Page';
+    }
+
+    if( get_page_template_slug( $post ) == 'template-blog-page.blade.php' ) {
+        $post_states[] = 'Blog Page';
     }
 
     return $post_states;
@@ -90,7 +94,7 @@ add_filter('acf/fields/flexible_content/layout_title/name=templates', function( 
 /**
  * Register Objects
  */
-foreach ( glob( get_template_directory( __FILE__ ) . '/app/Objects/*.php') as $file) {    
+foreach ( glob( get_template_directory( __FILE__ ) . '/app/Objects/*.php') as $file) {
 	require_once( $file );
 }
 
@@ -107,11 +111,31 @@ foreach( glob( get_template_directory( __FILE__ ) . '/app/Fields/*', GLOB_ONLYDI
 
 			$filename = basename( $file, '.php' ); // "Team"
 			$class = "App\\Fields\\{$namespace}\\{$filename}"; // "App\Fields\Objects\Team"
-			
+
 			$$filename = new $class(); // $Team = new App\Fields\Objects\Team
-		
+
 		}
-	
+
 	}
+
+}
+
+/*
+* Remove Yoast Seo Columns
+*/
+add_filter( 'manage_edit-page_columns', __NAMESPACE__ . '\\remove_yoast_columns');
+add_filter( 'manage_edit-post_columns', __NAMESPACE__ . '\\remove_yoast_columns');
+
+function remove_yoast_columns( $columns ) {
+
+    unset( $columns['wpseo-score-readability'] );
+    unset( $columns['wpseo-score'] );
+    unset( $columns['wpseo-title'] );
+    unset( $columns['wpseo-metadesc'] );
+    unset( $columns['wpseo-focuskw'] );
+    unset( $columns['wpseo-links']);
+    unset( $columns['wpseo-linked']);
+
+    return $columns;
 
 }
