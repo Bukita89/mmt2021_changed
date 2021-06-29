@@ -17,14 +17,14 @@ class Testimonial {
 
 		$testimonialInfo
 
-            ->addWysiwyg('team_quote',[
+            ->addWysiwyg('testimonial_quote',[
                 'label'         => 'Quote',
                 'tabs'          => 'all',
                 'toolbar'       => 'basic',
                 'media_upload'  => 0
             ])
 
-            ->addText('team_citation_name', [
+            ->addText('testimonial_citation_name', [
                 'label'    => 'Citation Name',
             ])
 

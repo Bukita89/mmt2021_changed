@@ -12,17 +12,18 @@ class Post {
 		 * Service Info
 		 */
 		$postInfo = new FieldsBuilder('post_info', [
-			'position' => 'acf_after_title'
+			'title'		=> 'Post Info',
+			'position'  => 'acf_after_title',
+			'style'		=> 'seamless'
 		]);
 
 		$postInfo
 
-            ->addTaxonomy('post_choose_category', [
+            ->addTaxonomy('post_category', [
                 'label'      => 'Choose Category',
                 'taxonomy'   => 'category',
                 'field_type' => 'select',
-                'required'   => 0,
-                'add_term'   => 0,
+                'add_term'   => 1,
                 'save_terms' => 1,
                 'load_terms' => 1
             ])

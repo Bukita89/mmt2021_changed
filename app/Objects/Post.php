@@ -10,7 +10,6 @@ add_action( 'init', function() {
 });
 
 // Post Columns
-
 add_filter( 'manage_post_posts_columns', function( $columns ) {
 
     unset(

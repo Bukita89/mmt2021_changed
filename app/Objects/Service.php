@@ -15,7 +15,7 @@ add_action( 'init', function() {
         "supports" 			=> array( "title", "thumbnail" ),
         "show_in_menu"      => true,
         "has_archive"       => false,
-        "public"            => false,
+        "public"            => true,
         "show_ui"           => true,
 
         "labels" => array(
