@@ -16,7 +16,7 @@
         } @else {
             line-height: $line-height;
         }
-     
+
         @media screen and (min-width: #{$min-vw * 1px}) {
             font-size: calc(#{$min-font-size * 1px} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw * 1px}) / #{strip-unit($max-vw - $min-vw)}));
         }
@@ -24,6 +24,12 @@
         @media screen and (min-width: #{$max-vw * 1px}) {
             font-size: rem-calc($max-font-size);
         }
+    }
+}
+
+@mixin ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @content;
     }
 }
 
@@ -40,10 +46,84 @@
         line-height: $line-height;
     }
 }
-  
+@mixin typo($type) {
+    @if ($type == 'h1') {
+        @include responsive-type(64, 52);
+        font-weight: 700;
+        line-height: rem-calc(76);
+
+        @include breakpoint(small only) {
+            line-height: rem-calc(57);
+        }
+    }
+
+    @if ($type == 'h2') {
+        @include responsive-type(52, 40);
+        font-weight: 700;
+        line-height: rem-calc(62);
+
+        @include breakpoint(small only) {
+            line-height: rem-calc(52);
+        }
+    }
+
+    @if ($type == 'h3') {
+        @include responsive-type(40, 32);
+        font-weight: 700;
+        line-height: rem-calc(52);
+
+        @include breakpoint(small only) {
+            line-height: normal;
+        }
+    }
+
+    @if ($type == 'h4') {
+        @include responsive-type(32, 28);
+        font-weight: 700;
+        line-height: normal;
+
+        @include breakpoint(small only) {
+            line-height: rem-calc(33);
+        }
+    }
+
+    @if ($type == 'h5') {
+        @include responsive-type(28, 24);
+        font-weight: 700;
+        line-height: rem-calc(33);
+
+        @include breakpoint(small only) {
+            line-height: normal;
+        }
+    }
+
+    @if ($type == 'h6') {
+        font-size: rem-calc(16);
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    @if ($type == 'text') {
+        @include responsive-type(24, 20);
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    @if ($type == 'p-sm') {
+        @include responsive-type(20, 16);
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    @if ($type == 'legal') {
+        @include responsive-type(12, 12);
+        font-weight: 400;
+        line-height: normal;
+    }
+}
 
 @mixin responsive-padding($direction: 'vert', $large: $base-padding, $base : 0.2, $important: 'false') {
-    //by default we have: 
+    //by default we have:
     //20% decrease for medium
     //10% descrease of medium
 
@@ -194,7 +274,7 @@
 
 
 @mixin responsive-margin($direction: 'vert', $large: $base-margin, $base : 0.2, $important: 'false') {
-    //by default we have: 
+    //by default we have:
     //20% decrease for medium
     //10% descrease of medium for small
 
@@ -401,7 +481,7 @@
     $slice: 2000;
     $index: 0;
     $loops: ceil(str-length($svg) / $slice);
-  
+
     @for $i from 1 through $loops {
         $chunk: str-slice($svg, $index, $index + $slice - 1);
         $chunk: str-replace($chunk, '"', "'");
@@ -412,7 +492,7 @@
         $encoded: #{$encoded}#{$chunk};
         $index: $index + $slice;
     }
-  
+
     @return url("data:image/svg+xml;charset=utf8,#{$encoded}");
   }
 
@@ -426,10 +506,10 @@
 /// @return {String} - Updated string
 @function str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search);
-  
+
     @if $index {
         @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
-  
+
     @return $string;
   }

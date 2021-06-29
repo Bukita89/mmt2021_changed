@@ -11,25 +11,29 @@ h6 {
 }
 
 h1 {
-    @include responsive-type($h1, percent($h1, 20));
+    @include typo('h1');
 }
 
 h2 {
-    @include responsive-type($h2, percent($h2, 20));
+    @include typo('h2');
 }
 
 h3 {
-    @include responsive-type($h3, percent($h3, 20));
+    @include typo('h3');
 }
 
 h4 {
-    @include responsive-type($h4, percent($h4, 20));
+    @include typo('h4');
 }
 
 h5 {
-    @include responsive-type($h5, percent($h5, 20));
+    @include typo('h5');
 }
 
 h6 {
-    @include responsive-type($h6, percent($h6, 20));
+    @include typo('h6');
+}
+
+.p-sm {
+    @include typo('p-sm');
 }
