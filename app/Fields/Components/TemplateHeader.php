@@ -31,8 +31,9 @@ class TemplateHeader {
             ])
                 ->conditional('include_template_header', '==', 1)
 
-            ->addText('template_subheadline', [
-                'label'	=> 'Subheadline'
+            ->addTextarea('template_short_description', [
+                'label'         => 'Short Description',
+                'rows'          => '2'
             ])
                 ->conditional('include_template_header', '==', 1);
 
