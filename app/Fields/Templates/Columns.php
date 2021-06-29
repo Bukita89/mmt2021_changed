@@ -35,7 +35,7 @@ class Columns {
                 ->addRepeater('columns', [
                     'layout'		=> 'block',
                     'min'			=> 1,
-                    'max'			=> 4,
+                    'max'			=> 2,
                     'button_label'	=> 'Add Column',
                     'wrapper'		=> [
                         'class'		=> 'hide-label'
@@ -55,6 +55,13 @@ class Columns {
                 ->endRepeater()
 
             ->addTab('Options')
+
+                ->addRadio('layout', [
+                    'label'         => 'Layout',
+                    'layout'        => 'horizontal',
+                ])
+                    ->addChoice('layout-wide', 'Wide')
+                    ->addChoice('layout-thin-card', 'Thin Card')
 
                 ->addFields(Background::getFields())
 

@@ -4,6 +4,7 @@ namespace App\Fields\Templates;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use App\Fields\Components\TemplateHeader;
+use App\Fields\Options\Background;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\Admin;
 
@@ -25,13 +26,15 @@ class InstagramFeed {
                 ->addFields(TemplateHeader::getFields())
 
                 ->addField('message_close', 'message', [
-                    'message'   => 'No additional options are required. This block will display an Instagram Feed based on the information provided in Brand Settings.',
+                    'message'   => 'No additional options are required. This block will display an Instagram Feed based on the information provided in <a target="_blank" href="/wp-admin/admin.php?page=acf-options-brand-settings/#acf-group_social_networks">Brand Settings</a>.',
                     'wrapper'   => [
                         'class' => 'hide-label'
                     ]
                 ])
 
             ->addTab('Options')
+
+                ->addFields(Background::getFields())
 
                 ->addFields(HtmlAttributes::getFields())
 

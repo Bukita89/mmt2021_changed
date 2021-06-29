@@ -25,7 +25,6 @@ class ImageCarousel {
                     'layout'        => 'block',
                     'min'           => 1,
                     'button_label'  => 'Add Item',
-                    'collapsed'     => 'image',
                     'wrapper'       => [
                         'class'     => 'hide-label'
                     ]

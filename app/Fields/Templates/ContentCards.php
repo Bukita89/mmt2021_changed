@@ -71,16 +71,16 @@ class ContentCards {
                     'layout'        => 'block',
                     'min'           => 1,
                     'button_label'  => 'Add Page',
-                    'collapsed'     => 'сhoose_page',
+                    'collapsed'     => 'page_id',
                     'wrapper'       => [
                         'class'     => 'hide-label'
                     ]
                 ])
                 ->conditional( 'data_source', '==', 'pages' )
 
-                    ->addPostObject('сhoose_page', [
+                    ->addPostObject('page_id', [
                         'label'         => 'Choose Page',
-                        'post_type'     => ['post_type'],
+                        'post_type'     => ['page'],
                         'return_format' => 'id',
                     ])
 
@@ -112,7 +112,7 @@ class ContentCards {
 
                     ->addPostObject('choose_service', [
                         'label'         => 'Choose Service',
-                        'post_type'     => ['post_type'],
+                        'post_type'     => ['mmt_service'],
                         'return_format' => 'id',
                     ])
 
@@ -135,10 +135,9 @@ class ContentCards {
                 ->addRadio('layout', [
                     'label'         => 'Layout',
                     'layout'        => 'horizontal',
-                    'default_value' => 'grid',
                 ])
-                    ->addChoice('grid', 'Grid')
-                    ->addChoice('stacked', 'Stacked')
+                    ->addChoice('layout-grid', 'Grid')
+                    ->addChoice('layout-stacked', 'Stacked')
 
                 ->addFields(HtmlAttributes::getFields())
 

@@ -24,7 +24,7 @@ class Background {
                 'layout'	=> 'horizontal'
             ])
 
-                ->addChoice('bg-grey', '‘Grey’')
+                ->addChoice('bg-grey', 'Grey')
                 ->addChoice('bg-light-grey', 'Light Grey');
 
 		return $backgroundOptions;

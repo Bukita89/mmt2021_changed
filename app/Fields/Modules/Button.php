@@ -29,14 +29,6 @@ class Button {
 
             ->addTab('Options')
 
-                ->addRadio('layout', [
-                    'label'         => 'Layout',
-                    'layout'        => 'horizontal',
-                    'default_value' => 'wide',
-                ])
-                    ->addChoice('wide', 'Wide')
-                    ->addChoice('thin-card', 'Thin Card')
-
                 ->addFields(ButtonDefaults::getFields())
 
                 ->addFields(HtmlAttributes::getFields());
