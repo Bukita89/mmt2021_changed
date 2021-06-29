@@ -7,12 +7,101 @@ use App\Fields\Lists\Buttons;
 use App\Fields\Components\Header;
 use App\Fields\Options\Background;
 use App\Fields\Options\HtmlAttributes;
+use App\Fields\Components\Button;
 
 class Shared {
 
 	public function __construct() {
 
 		/**
+		 * Home Hero Unit
+		 */
+		$homeHeroUnit = new FieldsBuilder('home_hero_unit', [
+            'title'    => 'Hero Unit',
+			'position' => 'acf_after_title'
+		]);
+
+		$homeHeroUnit
+
+			->addTab('Content')
+
+                ->addImage('home_front_image', [
+                    'label'         => 'Front Image',
+                    'preview_size'  => 'medium'
+                ])
+
+                ->addText('home_headline', [
+                    'label'    => 'Headline'
+                ])
+
+                ->addText('home_subheadline', [
+                    'label'    => 'Subheadline'
+                ])
+
+                ->addFields(Button::getFields( ))
+
+			->addTab('Options')
+
+				->addFields(HtmlAttributes::getFields())
+
+			->setLocation('page_type', '==', 'front_page');
+
+		// Register Home Hero Unit
+		add_action('acf/init', function() use ($homeHeroUnit) {
+			acf_add_local_field_group($homeHeroUnit->build());
+		});
+
+        /**
+		 * Inner Hero Unit
+		 */
+		$innerHeroUnit = new FieldsBuilder('inner_hero_unit', [
+            'title'    => 'Hero Unit',
+			'position' => 'acf_after_title'
+		]);
+
+		$innerHeroUnit
+
+			->addTab('Content')
+
+                ->addText('inner_headline', [
+                    'label'    => 'Headline'
+                ])
+
+                ->addWysiwyg('inner_short_description',[
+                    'label'         => 'Short Description',
+                    'tabs'          => 'all',
+                    'toolbar'       => 'basic',
+                    'media_upload'  => 0
+                ])
+
+                ->addTrueFalse('inner_show_down_arrow', [
+                    'wrapper' => [
+                        'class' => 'hide-label',
+                    ],
+                    'message'   => 'Show Down Arrow',
+                ])
+
+			->addTab('Options')
+
+                ->addTrueFalse('inner_include_overlay', [
+                    'wrapper' => [
+                        'class' => 'hide-label',
+                    ],
+                    'message'   => 'Include Overlay',
+                ])
+
+				->addFields(HtmlAttributes::getFields())
+
+            ->setLocation('page_template', '==', 'default')
+                ->and('page_type', '!=', 'front_page');
+
+		// Register Inner Hero Unit
+		add_action('acf/init', function() use ($innerHeroUnit) {
+			acf_add_local_field_group($innerHeroUnit->build());
+		});
+
+
+        /**
 		 * Hero Unit
 		 * @author Rich Staats <rich@secretstache.com>
 		 * @since 3.0.0
@@ -21,7 +110,7 @@ class Shared {
 		$heroUnit = new FieldsBuilder('hero_unit', [
 			'position' => 'acf_after_title'
 		]);
-		
+
 		$heroUnit
 
 			->addTab('Content')
@@ -34,8 +123,10 @@ class Shared {
 
 				->addFields(HtmlAttributes::getFields())
 
-			->setLocation('post_type', '==', 'page');
-			
+			->setLocation('post_type', '==', 'page')
+                ->and('page_type', '!=', 'front_page')
+                ->and('page_template', '!=', 'default');
+
 		// Register Hero Unit
 		add_action('acf/init', function() use ($heroUnit) {
 			acf_add_local_field_group($heroUnit->build());
@@ -118,7 +209,7 @@ class Shared {
 				->addChoice('fbq("track", "InitiateCheckout");', 'Initiated Checkout')
 				->addChoice('fbq("track", "AddPaymentInfo");', 'Added Payment Info')
 				->addChoice('fbq("track", "Purchase");', 'Made a Purchase')
-				
+
 			->setLocation('post_type', '==', 'page')
 				->or('post_type', '==', 'post');
 
