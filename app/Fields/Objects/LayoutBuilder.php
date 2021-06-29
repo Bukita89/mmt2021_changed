@@ -7,6 +7,10 @@ use App\Fields\Templates\Columns;
 use App\Fields\Templates\CallToAction;
 use App\Fields\Templates\BlockGrid;
 use App\Fields\Templates\SplitContent;
+use App\Fields\Templates\ContentCards;
+use App\Fields\Templates\Testimonials;
+use App\Fields\Templates\Team;
+use App\Fields\Templates\InstagramFeed;
 
 class LayoutBuilder {
 
@@ -15,22 +19,30 @@ class LayoutBuilder {
 		/**
 		 * Layout Builder
 		 */
-        
+
 		$layoutBuilder = new FieldsBuilder('layout_builder', [
-			'style' => 'seamless'
+			'style'         => 'seamless',
+            'position'      => 'normal',
+            'menu_order'    => 4
         ]);
-        
+
         $layoutBuilder
-        
+
 			->addFlexibleContent('templates', [
 				'label'			=> 'Layout Builder',
 				'button_label'	=> 'Add Template'
             ])
-            
+
                 ->addLayout(Columns::getFields())
-                
-                ->addLayout(CallToAction::getFields())
-                
+
+                ->addLayout(ContentCards::getFields())
+
+                ->addLayout(Testimonials::getFields())
+
+                ->addLayout(Team::getFields())
+
+                ->addLayout(InstagramFeed::getFields())
+
 			->setLocation('post_type', '==', 'page')
 				->or('post_type', '==', 'post')
 				->or('post_type', '==', 'ssm_team_member');
