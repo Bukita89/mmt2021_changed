@@ -18,12 +18,9 @@ class Columns {
 
         /**
          * [Template] - Columns
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $columnsTemplate = new FieldsBuilder('columns', [
-            'title'	=> 'Column(s)'
+            'title'	=> 'Free Form'
         ]);
 
         $columnsTemplate
@@ -32,42 +29,42 @@ class Columns {
 
                 ->addFields(TemplateHeader::getFields())
 
-                ->addRepeater('columns', [
-                    'layout'		=> 'block',
-                    'min'			=> 1,
-                    'max'			=> 2,
-                    'button_label'	=> 'Add Column',
-                    'wrapper'		=> [
-                        'class'		=> 'hide-label'
+                ->addFields(Modules::getFields())
+
+            ->addTab('Options')
+
+                ->addRadio('option_background_color', [
+                    'label'		=> 'Background Color',
+                    'layout'	=> 'horizontal',
+                    'wrapper'   => [
+                        'width'	=> '33'
                     ]
                 ])
 
-                    ->addTab('Content', [
-                        'placement'	=>	'left'
-                    ])
-
-                        ->addFields(Modules::getFields())
-
-                    ->addTab('Options')
-
-                        ->addFields(HtmlAttributes::getFields())
-
-                ->endRepeater()
-
-            ->addTab('Options')
+                    ->addChoice('bg-grey', 'Grey')
+                    ->addChoice('bg-light-grey', 'Light Grey')
 
                 ->addRadio('layout', [
                     'label'         => 'Layout',
                     'layout'        => 'horizontal',
+                    'wrapper'   => [
+                        'width'	=> '34'
+                    ]
                 ])
                     ->addChoice('layout-wide', 'Wide')
                     ->addChoice('layout-thin-card', 'Thin Card')
 
-                ->addFields(Background::getFields())
-
-                ->addFields(ColumnLayout::getFields())
-
-                ->addFields(ColumnAlignment::getFields())
+                ->addRadio('option_x_alignment', [
+                    'label'		=> 'X Alignment',
+                    'layout'	=> 'horizontal',
+                    'default_value' => 'center',
+                    'wrapper'   => [
+                        'width'	=> '33'
+                    ]
+                ])
+                    ->addChoice('left', 'Left')
+                    ->addChoice('center', 'Center')
+                    ->addChoice('right', 'Right')
 
                 ->addFields(HtmlAttributes::getFields())
 

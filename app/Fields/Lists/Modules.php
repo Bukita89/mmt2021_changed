@@ -3,7 +3,7 @@
 namespace App\Fields\Lists;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Lists\Buttons;
+use App\Fields\Modules\Button;
 use App\Fields\Modules\Header;
 use App\Fields\Modules\TextEditor;
 use App\Fields\Modules\Image;
@@ -43,7 +43,7 @@ class Modules {
 
                 ->addLayout(Form::getFields())
 
-                ->addLayout(Buttons::getFields())
+                ->addLayout(Button::getFields())
 
             ->endFlexibleContent();
 

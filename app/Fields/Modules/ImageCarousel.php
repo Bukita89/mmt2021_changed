@@ -20,22 +20,12 @@ class ImageCarousel {
 
             ->addTab('Content')
 
-                ->addRepeater('items', [
-                    'label'         => 'Items',
-                    'layout'        => 'block',
-                    'min'           => 1,
-                    'button_label'  => 'Add Item',
-                    'wrapper'       => [
-                        'class'     => 'hide-label'
+                ->addGallery('gallery', [
+                    'label'	    => 'Image Gallery',
+                    'wrapper'   => [
+                        'class' => 'hide-label'
                     ]
                 ])
-
-                    ->addImage('image', [
-                        'label'         => 'Image',
-                        'preview_size'  => 'medium'
-                    ])
-
-                ->endRepeater()
 
             ->addTab('Options')
 
