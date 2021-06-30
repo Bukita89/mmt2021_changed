@@ -12,7 +12,8 @@ class Service {
 		 * Service Info
 		 */
 		$serviceInfo = new FieldsBuilder('service_info', [
-			'position' => 'acf_after_title'
+			'position' => 'acf_after_title',
+			'menu_order' => 5
 		]);
 
 		$serviceInfo

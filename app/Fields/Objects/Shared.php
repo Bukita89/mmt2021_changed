@@ -62,7 +62,8 @@ class Shared {
 		 */
 		$innerHeroUnit = new FieldsBuilder('inner_hero_unit', [
             'title'    => 'Hero Unit',
-			'position' => 'acf_after_title'
+			'position' => 'acf_after_title',
+			'menu_order' => 1
 		]);
 
 		$innerHeroUnit
@@ -100,7 +101,8 @@ class Shared {
 
             ->setLocation('page_template', '==', 'default')
 				->and('page_template', '!=', 'template-blog-page.blade.php')
-                ->and('page_type', '!=', 'front_page');
+                ->and('page_type', '!=', 'front_page')
+				->or('post_type', '==', 'mmt_service');
 
 		// Register Inner Hero Unit
 		add_action('acf/init', function() use ($innerHeroUnit) {

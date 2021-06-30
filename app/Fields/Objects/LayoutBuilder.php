@@ -45,7 +45,7 @@ class LayoutBuilder {
 
 			->setLocation('post_type', '==', 'page')
 				->and('page_template', '!=', 'template-blog-page.blade.php')
-				->or('post_type', '==', 'ssm_team_member');
+				->or('post_type', '==', 'mmt_service');
 
 		// Register Layout Builder
 		add_action('acf/init', function() use ($layoutBuilder) {
