@@ -10,7 +10,7 @@ add_action( 'init', function() {
     register_extended_post_type( "mmt_service", array(
 
         "capability_type"   => "page",
-        "menu_icon"         => "dashicons-admin-generic",
+        "menu_icon"         => "dashicons-list-view",
         "menu_position"		=> 5,
         "supports" 			=> array( "title", "thumbnail" ),
         "show_in_menu"      => true,

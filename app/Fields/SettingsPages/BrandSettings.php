@@ -42,9 +42,6 @@ class BrandSettings {
 
 		/**
 		 * Business Information
-		 * @author Rich Staats <rich@secretstache.com>
-		 * @since 3.0.0
-		 * @todo Link to Team Snippet Code
 		 */
 		$businessInformation = new FieldsBuilder('business_information', [
 			'title'			=> 'Business Information',

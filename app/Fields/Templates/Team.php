@@ -34,7 +34,7 @@ class Team {
 
             ->addTab('Options')
 
-                ->addFields(Background::getFields())
+                // ->addFields(Background::getFields())
 
                 ->addFields(HtmlAttributes::getFields())
 
