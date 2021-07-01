@@ -37,11 +37,18 @@ $offcanvas-text-color: color('text');
             &:last-child {
                 margin-bottom: 0;
             }
+
+            &.button {
+                a {
+                    font-weight: 600;
+                }
+            }
         }
 
         a {
             padding: 0;
             font-size: rem-calc(20);
+            font-weight: 500;
         }
 
         &.drilldown {

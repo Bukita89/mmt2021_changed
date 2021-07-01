@@ -5,6 +5,7 @@ footer.site-footer {
 
     a {
         color: $white;
+        font-weight: 500;
     }
 
     ul {
@@ -50,6 +51,22 @@ footer.site-footer {
             width: rem-calc(48);
             background: #24282f;
             margin-right: rem-calc(16);
+            position: relative;
+            transition: background-color $tr/2;
+
+            &:hover {
+                background: color('primary');
+            }
+
+            a {
+                position: absolute;
+                @include overlay;
+
+                svg,
+                img {
+                    pointer-events: none;
+                }
+            }
 
             &:last-child {
                 margin-right: 0;

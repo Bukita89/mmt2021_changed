@@ -10,10 +10,15 @@
                     margin-right: 0 !important;
                 }
 
+                &.button {
+                    font-weight: 600;
+                    width: rem-calc(152);
+                }
+
                 &:not(.button) {
                     a {
                         font-size: rem-calc(20);
-                        font-weight: 700;
+                        font-weight: 500;
                         padding: rem-calc(8);
                         position: relative;
 
