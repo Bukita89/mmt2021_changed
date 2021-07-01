@@ -16,7 +16,8 @@
 
     .brand {
         max-height: rem-calc(60);
-        transition: max-height $tr/2;
+        max-width: rem-calc(281);
+        transition: max-height $tr/2, max-width $tr/2;
         display: flex;
 
         @include breakpoint(medium down) {
@@ -54,9 +55,11 @@
 
         .brand {
             max-height: rem-calc(48);
+            max-width: rem-calc(226);
 
             @include breakpoint(medium down) {
                 max-height: rem-calc(35);
+                max-width: rem-calc(164);
             }
         }
     }

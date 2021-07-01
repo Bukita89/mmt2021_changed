@@ -2,9 +2,13 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell small-12">
-                <div class="text-center">
-                    {{> navigation type="simple" menuClasses="vertical" data=common.footer-navigation}}
-                    {{{common.copyright}}}
+                <div class="text-center d-flex align-items-center align-justify footer-content">
+                    {{> navigation type="simple" menuClasses="horizontal footer-nav" data=common.footer-navigation}}
+
+                    <ul class="footer-society">
+                        <li><a href="#"><img src="{{root}}assets/images/facebook-logo.svg" class="editable-svg" alt=""></a></li>
+                        <li><a href="#"><img src="{{root}}assets/images/instagram-logo.svg" class="editable-svg" alt=""></a></li>
+                    </ul>
                 </div>
             </div>
         </div>

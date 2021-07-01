@@ -17,14 +17,16 @@ primary-navigation:
     text: Start Moving
     classes: button
 
-
 footer-navigation:
   -
-    link: "index"
-    text: Home
-  -
-    link: "about"
-    text: About
-  -
-    link: "servives"
+    link: "services"
     text: Services
+  -
+    link: "who-we-are"
+    text: Who We Are
+  -
+    link: "blog"
+    text: Blog
+  -
+    link: "#"
+    text: Start Moving
