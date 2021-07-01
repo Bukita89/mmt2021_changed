@@ -1,11 +1,11 @@
-$offcanvas-background: color('white');
+$offcanvas-background: color('black-light');
 $offcanvas-background-opacity: 1;
 $offcanvas-links-color: color('text');
 $offcanvas-text-color: color('text');
 
 //off-canvas content
 .off-canvas {
-    background: rgba($offcanvas-background, $offcanvas-background-opacity);
+    background: $offcanvas-background;
     color: $offcanvas-text-color;
     overflow: auto;
     top: 0;
@@ -14,9 +14,12 @@ $offcanvas-text-color: color('text');
     width: 100%;
     transform: translateX(100%);
     transition: transform $tr;
-    padding: rem-calc(26 33);
+    box-shadow: 0 10px 30px 20px rgba(0, 0, 0, 0.5);
+    padding-top: rem-calc(108);
+    padding-left: 0;
+    padding-right: 0;
 
-    //color of the links 
+    //color of the links
     a:link,
     a:visited {
         color: $offcanvas-links-color;
@@ -28,8 +31,17 @@ $offcanvas-text-color: color('text');
 
     //menu
     .menu {
+        > li {
+            margin-bottom: rem-calc(32);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
         a {
             padding: 0;
+            font-size: rem-calc(20);
         }
 
         &.drilldown {
@@ -56,5 +68,13 @@ $offcanvas-text-color: color('text');
 
     &.is-open {
         box-shadow: none;
+    }
+}
+
+.off-canvas-content {
+    &.is-open-left  {
+        .site-header {
+            background: color('black-light');
+        }
     }
 }

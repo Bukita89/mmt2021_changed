@@ -1,6 +1,8 @@
 .site-header {
     .primary-navigation {
         ul {
+            align-items: center;
+
             > li {
                 margin-right: rem-calc(32);
 
@@ -8,37 +10,39 @@
                     margin-right: 0 !important;
                 }
 
-                a {
-                    font-size: rem-calc(20);
-                    font-weight: 700;
-                    padding: rem-calc(8);
-                    position: relative;
+                &:not(.button) {
+                    a {
+                        font-size: rem-calc(20);
+                        font-weight: 700;
+                        padding: rem-calc(8);
+                        position: relative;
 
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 50%;
-                        transform: translate(-50%, 0);
-                        height: 1px;
-                        background: color('blue');
-                        transition: width $tr/2;
-                        width: 0;
-                    }
-
-                    &:hover {
                         &:before {
-                            width: calc(100% - 1rem);
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            height: 1px;
+                            background: color('blue');
+                            transition: width $tr/2;
+                            width: 0;
+                        }
+
+                        &:hover {
+                            &:before {
+                                width: calc(100% - 1rem);
+                            }
                         }
                     }
-                }
 
-                &.current-menu-item {
-                    a {
-                        color: color('blue');
+                    &.current-menu-item {
+                        a {
+                            color: color('blue');
 
-                        &:before {
-                            width: calc(100% - 1rem);
+                            &:before {
+                                width: calc(100% - 1rem);
+                            }
                         }
                     }
                 }
@@ -52,6 +56,10 @@
 .menu .active>a {
     background: inherit;
     color: inherit;
+}
+
+.drilldown a {
+    background: none;
 }
 
 .menu,

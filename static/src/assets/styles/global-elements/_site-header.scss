@@ -5,18 +5,40 @@
     left: 0;
     width: 100%;
     background: none;
-    z-index: 9998;
     height: rem-calc(140);
     transition: background-color $tr/2, height $tr/2, padding $tr/2;
+    z-index: 9999;
+
+    @include breakpoint(medium down) {
+        height: rem-calc(76);
+        padding: rem-calc(20 0);
+    }
 
     .brand {
         max-height: rem-calc(60);
         transition: max-height $tr/2;
         display: flex;
 
+        @include breakpoint(medium down) {
+            max-height: rem-calc(35);
+            max-width: rem-calc(164);
+
+            a {
+                width: 100%;
+            }
+        }
+
         svg {
             width: auto;
             height: 100%;
+        }
+    }
+
+    .navbar {
+        > .grid-x {
+            @include breakpoint(medium down) {
+                justify-content: space-between;
+            }
         }
     }
 
@@ -25,8 +47,17 @@
         padding: rem-calc(24 0);
         height: rem-calc(96);
 
+        @include breakpoint(medium down) {
+            height: rem-calc(76);
+            padding: rem-calc(20 0);
+        }
+
         .brand {
             max-height: rem-calc(48);
+
+            @include breakpoint(medium down) {
+                max-height: rem-calc(35);
+            }
         }
     }
 
