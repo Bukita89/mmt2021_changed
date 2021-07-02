@@ -29,6 +29,7 @@
 
     &:focus {
         background: color('primary');
+        color: color('black-shade');
 
         &:before {
             content: '';

@@ -1,7 +1,26 @@
-<section class="hero-unit{{#ifequal hero_unit_option 'bg_color'}} bg-{{hero_unit_bg_color}}{{/ifequal}}{{#ifequal hero_unit_option 'bg_image'}} bg-image{{/ifequal}} {{#ifequal hero_unit_option 'bg_video'}} bg-video{{/ifequal}} {{hero_classes}}" {{#ifequal hero_unit_option 'bg_image'}} style="background-image: url({{hero_unit_bg_image}})" {{/ifequal}}>
+<section class="hero-unit{{#ifequal hero_unit_option 'bg_color'}} bg-{{hero_unit_bg_color}}{{/ifequal}}{{#ifequal hero_unit_option 'bg_image'}} bg-image{{/ifequal}} {{#ifequal hero_unit_option 'bg_video'}} bg-video{{/ifequal}} {{hero_classes}}">
+
     {{#ifequal hero_unit_option 'bg_image'}}
-        <div class="overlay"></div>
+
+        <div class="overlay hero-image">
+            {{#ifequal hero_unit_lines 'true'}}
+            <div class="overlay hero-lines">
+                <img src="{{root}}assets/images/cms/hero-line-1.svg" alt="">
+            </div>
+            {{/ifequal}}
+            <img src="{{root}}{{hero_unit_bg_image}}" alt="">
+        </div>
+
+    {{else}}
+
+        {{#ifequal hero_unit_lines 'true'}}
+        <div class="overlay hero-lines">
+            <img src="{{root}}assets/images/cms/hero-line-1.svg" alt="">
+        </div>
+        {{/ifequal}}
+
     {{/ifequal}}
+
 
     {{#ifequal hero_unit_option 'bg_video'}}
         <div class="overlay"></div>
