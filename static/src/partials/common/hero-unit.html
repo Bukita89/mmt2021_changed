@@ -15,7 +15,11 @@
 
         {{#ifequal hero_unit_lines 'true'}}
         <div class="overlay hero-lines">
-            <img src="{{root}}assets/images/cms/hero-line-1.svg" alt="">
+            {{#if hero_unit_line_img}}
+                <img src="{{root}}{{hero_unit_line_img}}" alt="">
+            {{else}}
+                <img src="{{root}}assets/images/cms/hero-line-1.svg" alt="">
+            {{/if}}
         </div>
         {{/ifequal}}
 
@@ -53,4 +57,10 @@
         </div>
 
     </div>
+
+    {{#if hero_button_bottom}}
+    <div class="button-to-section">
+        <a href="#"></a>
+    </div>
+    {{/if}}
 </section>
