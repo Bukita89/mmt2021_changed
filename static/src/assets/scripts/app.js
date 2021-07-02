@@ -31,6 +31,17 @@ $(function() {
     }
     /* end Sticky header */
 
+    /* hero unit button to bottom */
+    if($('.hero-button-to-bottom').length) {
+        $('.hero-button-to-bottom').on('click', function (e) {
+            e.preventDefault();
+
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $("body section.content-block").offset().top
+            }, 2000);
+        })
+    }
+    /* hero unit button to bottom end*/
 
     /* Hamburger click handle */
     $('.hamburger').on('click', function() {
