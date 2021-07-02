@@ -36,9 +36,11 @@ $(function() {
         $('.hero-button-to-bottom').on('click', function (e) {
             e.preventDefault();
 
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $("body section.content-block").offset().top
-            }, 2000);
+            if ($("body section.content-block").length) {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("body section.content-block").offset().top
+                }, 2000);
+            }
         })
     }
     /* hero unit button to bottom end*/

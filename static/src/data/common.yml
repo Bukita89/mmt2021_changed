@@ -13,7 +13,7 @@ primary-navigation:
     link: "blog"
     text: Blog
   -
-    link: "#"
+    link: "services"
     text: Start Moving
     classes: button
 
@@ -28,5 +28,5 @@ footer-navigation:
     link: "blog"
     text: Blog
   -
-    link: "#"
+    link: "services"
     text: Start Moving
