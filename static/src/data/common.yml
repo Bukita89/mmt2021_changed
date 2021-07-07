@@ -33,19 +33,19 @@ footer-navigation:
 
 content-cards:
     -
-        img: assets/images/cms/item-4.png
+        img: assets/images/cms/item-img-2.png
         title: Personal Training
         description: Our personal trainers will work with you to set and meet your fitness goals, whether you want to improve your golf game or run your first marathon.
         link: "#"
         button-text: Elevate
     -
-        img: assets/images/cms/item-2.png
+        img: assets/images/cms/item-img-4.png
         title: Restorative Bodywork
         description: Our licensed massage therapists and bodywork specialists aid in recovery using proven techniques including myofascial release, sports massage, and neuromuscular therapy.
         link: "#"
         button-text: Restore
     -
-        img: assets/images/cms/item-3.png
+        img: assets/images/cms/item-img-3.png
         title: Physical Therapy
         description: All our physical therapists are board certified and come with at least X years of experience. We aid your recovery from minor and major injuries, surgery, and chronic pain.
         link: "#"

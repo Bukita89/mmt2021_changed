@@ -8,6 +8,14 @@ section.content-block.template-free-form {
         background: color('blue-900');
         clip-path: polygon(100% 0, 100% 83%, 81% 100%, 0 100%, 0 0);
 
+        @include breakpoint(medium down) {
+            padding: rem-calc(32 28 64 28);
+
+            .grid-container {
+                padding: 0;
+            }
+        }
+
         form {
             li.gfield {
                 input,

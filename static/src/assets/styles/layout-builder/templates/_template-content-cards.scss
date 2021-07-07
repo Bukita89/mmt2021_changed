@@ -1,4 +1,98 @@
 section.content-block.template-content-cards {
+    .template-cards-content-grid {
 
+        @include breakpoint(medium down) {
+            .slick-track {
+                display: flex !important;
+            }
 
+            .slick-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: inherit !important;
+
+                > div,
+                .cell {
+                    height: 100%;
+                }
+            }
+
+            .slick-dots {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: rem-calc(32);
+
+                li {
+                    background: color('grey');
+                    width: rem-calc(16);
+                    height: rem-calc(16);
+                    margin-right: rem-calc(8);
+                    font-size: 0;
+                    transition: background-color $tr/2;
+
+                    &.slick-active {
+                        background: color('blue');
+                    }
+
+                    &:last-child {margin-right: 0;}
+                }
+            }
+        }
+
+        .cell {
+            display: flex !important;
+            flex-direction: column;
+            max-width: rem-calc(384);
+
+            .img-wrapper {
+                max-height: rem-calc(241);
+                height: 100%;
+                clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
+                overflow: hidden;
+
+                @include breakpoint(small only) {
+                    max-height: rem-calc(192);
+                }
+
+                img,
+                svg {
+                    object-fit: cover;
+                    object-position: center center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .content {
+                height: 100%;
+                background: color('blue-900');
+                padding: rem-calc(32);
+                display: flex;
+                flex-direction: column;
+                clip-path: polygon(100% 0, 100% 82%, 70% 100%, 0 100%, 0 0);
+
+                .title {
+                    & + * {
+                        margin-top: rem-calc(8);
+                    }
+                }
+
+                .description {
+                    margin-bottom: rem-calc(32);
+                    @include typo('p-sm');
+                    font-weight: 5300;
+                }
+
+                .button {
+                    margin-top: auto;
+                    width: fit-content;
+                }
+            }
+        }
+    }
 }

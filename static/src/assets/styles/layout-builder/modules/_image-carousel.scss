@@ -9,7 +9,7 @@
         right: 0;
         height: rem-calc(64);
         width: rem-calc(64);
-        background-color: #24282f;
+        background-color: color('blue-900');
         transition: background-color $tr/2, border $tr/2;
         border: 1px solid transparent;
 
@@ -152,6 +152,8 @@
         svg {
             object-position: center center;
             object-fit: cover;
+            height: 100%;
+            width: 100%;
         }
     }
 }

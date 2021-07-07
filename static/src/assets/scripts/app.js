@@ -63,6 +63,32 @@ $(function() {
     }
     /* image carousel end */
 
+    /* content cards start */
+    if($('.template-cards-content-grid').length) {
+        if($(window).width() < 1025) {
+            $('.template-cards-content-grid').slick(
+                {
+                    dots: true,
+                    infinite: false,
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    responsive: [
+                        {
+                            breakpoint: 769,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                dots: true
+                            }
+                        },
+                    ]
+                }
+            )
+        }
+    }
+    /* content cards end*/
+
     /* Hamburger click handle */
     $('.hamburger').on('click', function() {
         $('body').toggleClass('offcanvas-active');
