@@ -5,8 +5,17 @@ section.content-block.template-free-form {
         margin-left: auto;
         margin-right: auto;
         padding: rem-calc(64);
-        background: #24282f;
+        background: color('blue-900');
         clip-path: polygon(100% 0, 100% 83%, 81% 100%, 0 100%, 0 0);
+
+        form {
+            li.gfield {
+                input,
+                textarea {
+                    border: none !important;
+                }
+            }
+        }
 
         header.module {
             & + * {

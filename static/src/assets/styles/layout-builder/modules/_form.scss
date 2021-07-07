@@ -19,7 +19,6 @@ $input-border: 1px solid color('black');
             margin: 0;
             padding: $input-paddings;
             height: $input-height;
-            border: $input-border;
 
             &::placeholder {
                 color: inherit;
@@ -88,7 +87,7 @@ $input-border: 1px solid color('black');
                 textarea {
                     background: color('black-light');
                     color: color('white');
-                    border: none !important;
+                    border: 1px solid color('white');
 
                     &::placeholder {
                         font-size: rem-calc(20);
