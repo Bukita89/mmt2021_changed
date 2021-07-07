@@ -1,0 +1,12 @@
+<div class="module carousel images-carousel-wrapper {{#if moduleClasses}} {{moduleClasses}}{{/if}}">
+    <button class="images-carousel__prev slick-prev"></button>
+    <button class="images-carousel__next slick-next"></button>
+
+    <div class="images-carousel">
+        {{#each data}}
+        <div class="carousel-item">
+            <img src="{{root}}{{img}}" alt="">
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,24 @@
+section.content-block.template-free-form {
+
+    &.layout-card {
+        max-width: rem-calc(790);
+        margin-left: auto;
+        margin-right: auto;
+        padding: rem-calc(64);
+        background: #24282f;
+        clip-path: polygon(100% 0, 100% 83%, 81% 100%, 0 100%, 0 0);
+
+        header.module {
+            & + * {
+                margin-top: rem-calc(32);
+            }
+        }
+
+        .module.text-editor {
+            p {
+                @include typo('text');
+                font-weight: 300;
+            }
+        }
+    }
+}

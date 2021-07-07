@@ -7,7 +7,7 @@
 @import 'foundation-sites/scss/foundation';
 //@import 'motion-ui/src/motion-ui.scss';
 
-// Grids 
+// Grids
 @include foundation-xy-grid-classes;
 
 // Generic components
@@ -90,5 +90,7 @@
 @import 'layout-builder/modules/carousel';
 @import 'layout-builder/modules/picture';
 @import 'layout-builder/modules/form';
+@import 'layout-builder/modules/image-carousel';
 
 @import 'layout-builder/templates/template-header';
+@import 'layout-builder/templates/template-free-form';

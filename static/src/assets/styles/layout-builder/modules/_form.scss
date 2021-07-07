@@ -1,4 +1,4 @@
-$input-height: rem-calc(50);
+$input-height: rem-calc(48);
 $input-paddings: rem-calc(10 20);
 $input-border: 1px solid color('black');
 
@@ -48,7 +48,7 @@ $input-border: 1px solid color('black');
         }
 
         textarea {
-            height: auto;
+            height: rem-calc(144);
         }
 
         .gform_title {
@@ -76,12 +76,24 @@ $input-border: 1px solid color('black');
             li.gfield {
                 width: 100%;
                 margin-top: 0;
-                @include responsive-margin('bottom', 30, 0.2, 'true');
-                padding: rem-calc(0 15);
+                @include responsive-margin('bottom', 16, 0.2, 'true');
+                padding: rem-calc(0 8);
                 position: relative;
 
                 &:last-child {
                     margin-bottom: 0 !important;
+                }
+
+                input,
+                textarea {
+                    background: color('black-light');
+                    color: color('white');
+                    border: none !important;
+
+                    &::placeholder {
+                        font-size: rem-calc(20);
+                        font-weight: 500;
+                    }
                 }
 
                 @include breakpoint(large) {
@@ -99,7 +111,7 @@ $input-border: 1px solid color('black');
                 }
 
                 .gfield_description {
-                    font-size: 80%; 
+                    font-size: 80%;
                 }
 
                 &.field_description_above {
@@ -113,7 +125,7 @@ $input-border: 1px solid color('black');
                         margin-top: rem-calc(5);
                     }
                 }
-          
+
                 &.gfield_error {
                     background: none ;
                     border: 0;
@@ -148,7 +160,7 @@ $input-border: 1px solid color('black');
                 //checkbox and radio buttons common styles
                 .ginput_container_checkbox .gfield_checkbox,
                 .ginput_container_radio .gfield_radio {
-           
+
                     list-style-type: none;
                     margin: 0;
                     padding: 0;
@@ -204,7 +216,7 @@ $input-border: 1px solid color('black');
                     }
                 }
 
-                //radio buttons 
+                //radio buttons
                 .ginput_container_radio {
                     .gfield_radio {
                         >li {
@@ -234,7 +246,7 @@ $input-border: 1px solid color('black');
                         overflow: hidden;
                         position: absolute;
                         z-index: -1;
-        
+
                         +.gfield_label {
                             display: flex;
                             align-items: center;
@@ -249,18 +261,18 @@ $input-border: 1px solid color('black');
                             color: color('white');
                             height: $input-height;
                         }
-        
+
                         &:focus+.gfield_label,
                         +.gfield_label:hover {
                             background-color: color('black');
                             color: color('white');
                         }
-        
+
                         &:focus+.gfield_label {
                             outline: 1px dotted #000;
                             outline: -webkit-focus-ring-color auto 5px;
                         }
-        
+
                         +.gfield_label * {
                             pointer-events: none;
                         }
@@ -272,7 +284,7 @@ $input-border: 1px solid color('black');
         .gform_footer {
             @include responsive-margin('top', 30);
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
 
             input.button,

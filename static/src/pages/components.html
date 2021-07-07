@@ -8,15 +8,18 @@ meta_title: Components
 	hero_unit_bg_color: bg-{{color}}
 -->
 
-{{#> content-block template="columns"}}
+{{#> content-block template="free-form"}}
     <div class="grid-container">
 
-        {{> template-header headline="The Template Header" subheadline="The Template Subheadline" classes="align-center" }}
+        {{> template-header headline="The Template Header" description="The Template Subheadline" moduleClasses="align-center" }}
+        {{> template-header headline="Your complete fitness studio" description="We provide you and our experts with the tools and state-of-the-art facilities to ensure you’re receiving the highest level of training and support." moduleClasses="" }}
+        {{> template-header headline="Momenta Moves" description="Share your journey.  #Momenta  #MovingYouForward" }}
+        {{> template-header headline="Meet Your Wellness Specialists" description="At Momenta, you get the holistic support of a team of bodywork specialists, trainers, and nutritionists to elevate every aspect of your fitness and wellness." }}
 
         <div class="grid-x grid-margin-x has-1-cols">
             <div class="cell small-12">
                 <div class="inner">
-                    {{> header headline="Header module" }} 
+                    {{> header headline="Header module" }}
                     {{#> text-editor }}
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ad, quis fugiat architecto ipsam soluta facilis nulla aut fuga enim! Quam, commodi itaque. Eos ea ullam officiis sapiente perspiciatis voluptate.</p>
                         <img src="{{root}}assets/images/cms/placeholder.jpg" class="alignright" alt="" width="300">
@@ -31,8 +34,52 @@ meta_title: Components
                     {{> picture }}
                     {{> video src="https://www.youtube.com/embed/02J5A3r-Bdk" classes="youtube" }}
                     {{> form}}
-                    {{{ buttons buttonClasses="default, simple" labels="Button default, Button simple" urls="#, #"}}} 
+                    {{{ buttons buttonClasses="default, simple, simple arrow, outlined" labels="Button default, Button simple, Simple arrow, Outlined" urls="#, #, #, #"}}}
                     {{>carousel}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/content-block}}
+
+{{#> content-block template="free-form"}}
+    <div class="grid-container">
+        {{> template-header headline="Your complete fitness studio" description="We provide you and our experts with the tools and state-of-the-art facilities to ensure you’re receiving the highest level of training and support." moduleClasses="" }}
+
+        <div class="grid-x grid-margin-x has-1-cols">
+            <div class="cell medium-12">
+                <div class="inner">
+                    {{>image-carousel data=image-carousel.items }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/content-block}}
+
+{{#> content-block template="free-form" classes="layout-card"}}
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x has-1-cols">
+            <div class="cell medium-12">
+                <div class="inner card">
+                    {{> header headline="Our Mission" description="Momenta is devoted to one goal: yours." moduleClasses="" }}
+                    {{#> text-editor}}
+                    <p>
+                        Every service we provide is tailored to you and your unique needs. We’re more than a gym—we’re your comprehensive fitness and wellness concierge, complete with upscale training facilities, an integrated coaching team, and luxury spa services. We work with you and for you to build the focus, strength, and resilience to continue to succeed at everything you pursue in life.
+                    </p>
+                    {{/text-editor}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/content-block}}
+
+{{#> content-block template="free-form" classes="layout-card"}}
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x has-1-cols">
+            <div class="cell medium-12">
+                <div class="inner card">
+                    {{> header headline="Our Mission" description="How can Momenta elevate you? We look forward to learning about your unique goals and developing the plan to get you there." moduleClasses="" }}
+                    {{> form}}
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 .bg-dark {
   color: color('inverse');
 
-  label, 
+  label,
   a:not(.button) {
     color: color('inverse');
   }
@@ -29,7 +29,7 @@
               &:before {
                 border-color: color('inverse');
               }
-              
+
               &:after {
                 background: color('inverse') !important;
               }
@@ -39,6 +39,23 @@
       }
     }
   }
+}
+
+
+.bg-grey {
+    background: color('grey');
+}
+
+.bg-light-grey {
+    background: color('light-grey');
+
+    .template-header {
+        h2,
+        .subheadline,
+        p {
+            color: color('black-light');
+        }
+    }
 }
 
 .bg-image {
@@ -55,7 +72,7 @@
     overflow: hidden;
     @include overlay;
     z-index: 1;
-  
+
     video {
         transform: translate(-50%, -50%);
         left: 50%;

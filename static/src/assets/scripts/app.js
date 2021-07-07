@@ -45,6 +45,24 @@ $(function() {
     }
     /* hero unit button to bottom end*/
 
+    /* image carousel */
+    if($('.images-carousel').length) {
+        $('.images-carousel').slick(
+            {
+                dots: false,
+                infinite: false,
+                arrows: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                fade: true,
+                nextArrow: '.images-carousel__next',
+                prevArrow: '.images-carousel__prev',
+            }
+        )
+    }
+    /* image carousel end */
+
     /* Hamburger click handle */
     $('.hamburger').on('click', function() {
         $('body').toggleClass('offcanvas-active');
