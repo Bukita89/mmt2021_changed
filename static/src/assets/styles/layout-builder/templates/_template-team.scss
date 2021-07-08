@@ -60,6 +60,10 @@ section.content-block.template-team {
                 clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 16%);
                 height: rem-calc(282);
 
+                @include breakpoint(medium down) {
+                    height: rem-calc(304);
+                }
+
                 img,
                 svg {
                     object-position: center center;
