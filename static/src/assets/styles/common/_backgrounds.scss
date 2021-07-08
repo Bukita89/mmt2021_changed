@@ -43,10 +43,18 @@
 
 .bg-grey {
     background: color('grey');
+
+    &.content-block {
+        @include responsive-margin('top', 96);
+    }
 }
 
 .bg-light-grey {
     background: color('light-grey');
+
+    &.content-block {
+        @include responsive-margin('top', 96);
+    }
 
     .template-header {
         h2,

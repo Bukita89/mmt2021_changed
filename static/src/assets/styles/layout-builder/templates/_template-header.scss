@@ -12,6 +12,8 @@ header.template-header {
     }
 
     .headline {
+        font-weight: 600;
+
         & + * {
             margin-top: rem-calc(16);
         }

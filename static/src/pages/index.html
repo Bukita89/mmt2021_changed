@@ -12,3 +12,21 @@ show_hero_unit_button: true
 hero_unit_button_text: Start Moving
 hero_unit_button_url: "services.html"
 ---
+
+{{>template-content-cards data=common.content-cards layout="grid"}}
+
+{{#> content-block template="free-form"}}
+<div class="grid-container">
+    {{> template-header headline="Your complete fitness studio" description="We provide you and our experts with the tools and state-of-the-art facilities to ensure you’re receiving the highest level of training and support." moduleClasses="" }}
+
+    <div class="grid-x grid-margin-x has-1-cols">
+        <div class="cell medium-12">
+            <div class="inner">
+                {{>image-carousel data=image-carousel.items }}
+            </div>
+        </div>
+    </div>
+</div>
+{{/content-block}}
+
+{{>template-instagram-feed classes="bg-light-grey" data=instagram-feed.items headline="Momenta Moves" description="<b>Share your journey.  #Momenta  #MovingYouForward</b>"}}
