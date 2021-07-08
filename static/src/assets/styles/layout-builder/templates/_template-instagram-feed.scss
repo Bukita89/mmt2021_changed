@@ -1,5 +1,5 @@
-section.content-block.template-team {
-    .team-top {
+section.content-block.template-instagram-feed {
+    .instagram-feed-top {
         position: relative;
 
         & + * {
@@ -9,32 +9,19 @@ section.content-block.template-team {
                 margin-top: rem-calc(24);
             }
         }
+
+        .template-header {
+            .headline {
+                font-weight: 600;
+            }
+        }
     }
 
+
     .slick-slide {
+
         .item {
-            .name,
-            .description {
-                margin: 0;
-            }
-
-            .name {
-                @include typo('text');
-                font-weight: 300;
-
-                & + * {
-                    margin-top: rem-calc(2);
-                }
-            }
-
-            .description {
-                @include typo('h6');
-                font-weight: 300;
-            }
-
             .img-wrapper {
-                overflow: hidden;
-                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 16%);
                 height: rem-calc(282);
 
                 @include breakpoint(medium down) {
@@ -47,10 +34,6 @@ section.content-block.template-team {
                     object-fit: cover;
                     height: 100%;
                     width: 100%;
-                }
-
-                & + * {
-                    margin-top: rem-calc(16);
                 }
             }
         }

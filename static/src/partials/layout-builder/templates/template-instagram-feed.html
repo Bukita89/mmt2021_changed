@@ -1,0 +1,21 @@
+{{#> content-block template="instagram-feed" classes=classes}}
+<div class="grid-container">
+    <div class="instagram-feed-top">
+        {{> template-header headline=headline description=description moduleClasses="" }}
+        <button class="instagram-feed__prev slick-prev"></button>
+        <button class="instagram-feed__next slick-next"></button>
+    </div>
+
+    <div class="instagram-feed-slider">
+        {{#each data}}
+            <div class="item">
+                <div class="img-wrapper">
+                    <img src="{{root}}{{img}}" alt="">
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+
+</div>
+{{/content-block}}

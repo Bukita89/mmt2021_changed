@@ -11,28 +11,6 @@ section.content-block.template-testimonials {
         }
     }
 
-    @include slider-arrows;
-
-    .slick-arrow {
-        bottom: 0;
-        left: initial;
-        top: initial;
-        right: 0;
-        margin: 0 !important;
-
-        @include breakpoint(small only) {
-            margin-top: rem-calc(32) !important;
-        }
-
-        &.slick-prev {
-            @include breakpoint(small only) {
-                left: 0;
-                right: initial;
-            }
-        }
-    }
-
-
     .slick-slide {
 
         .item {
@@ -80,21 +58,6 @@ section.content-block.template-testimonials {
         }
     }
 
-    .slick-track
-    {
-        display: flex !important;
-    }
-
-    .slick-slide
-    {
-        height: inherit !important;
-
-        > div,
-        .item {
-            height: 100%;
-        }
-    }
-
     &.bg-grey {
         .slick-slide {
             .item {
@@ -115,6 +78,27 @@ section.content-block.template-testimonials {
                 &:before {
                     background: color('light-grey');
                 }
+            }
+        }
+    }
+
+    @include slider-arrows;
+
+    .slick-arrow {
+        bottom: 0;
+        left: initial;
+        top: initial;
+        right: 0;
+        margin: 0 !important;
+
+        @include breakpoint(small only) {
+            margin-top: rem-calc(32) !important;
+        }
+
+        &.slick-prev {
+            @include breakpoint(small only) {
+                left: 0;
+                right: initial;
             }
         }
     }

@@ -127,6 +127,38 @@ $(function() {
     }
     /* testimonials carousel end */
 
+    /* testimonials carousel */
+    if($('.instagram-feed-slider').length) {
+        $('.instagram-feed-slider').slick(
+            {
+                dots: false,
+                infinite: false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                nextArrow: '.instagram-feed__next',
+                prevArrow: '.instagram-feed__prev',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            }
+        )
+    }
+    /* testimonials carousel end */
+
     /* content cards start */
     if($('.template-cards-content-grid').length) {
         if($(window).width() < 1025) {
