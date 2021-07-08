@@ -1,0 +1,113 @@
+section.content-block.template-testimonials {
+    .testimonials-top {
+        position: relative;
+
+        & + * {
+            margin-top: rem-calc($base-margin/2);
+
+            @include breakpoint(small only) {
+                margin-top: rem-calc(24);
+            }
+        }
+    }
+
+    @include slider-arrows;
+
+    .slick-arrow {
+        bottom: 0;
+        left: initial;
+        top: initial;
+        right: 0;
+        margin: 0 !important;
+
+        @include breakpoint(small only) {
+            margin-top: rem-calc(32) !important;
+        }
+
+        &.slick-prev {
+            @include breakpoint(small only) {
+                left: 0;
+                right: initial;
+            }
+        }
+    }
+
+
+    .slick-slide {
+
+        .item {
+            background: none;
+            color: color('black-light');
+            clip-path: polygon(100% 0, 100% 83%, 73% 100%, 0 100%, 0 0);
+            background: color('grey');
+            position: relative;
+            padding: rem-calc(28 32 32 32);
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                background: color('black-light');
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                clip-path: polygon(100% 0, 100% 83%, 73% 100%, 0 100%, 0 0);
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+            }
+
+            .review {
+                @include typo('text');
+                margin-bottom: rem-calc(38);
+            }
+
+            .name {
+                @include typo('p-sm');
+                font-weight: 600;
+            }
+        }
+    }
+
+    .slick-track
+    {
+        display: flex !important;
+    }
+
+    .slick-slide
+    {
+        height: inherit !important;
+
+        > div,
+        .item {
+            height: 100%;
+        }
+    }
+
+    &.bg-grey {
+        .slick-slide {
+            .item {
+                background: color('black-light');
+
+                &:before {
+                    background: color('grey');
+                }
+            }
+        }
+    }
+
+    &.bg-light-grey {
+        .slick-slide {
+            .item {
+                background: color('black-light');
+
+                &:before {
+                    background: color('light-grey');
+                }
+            }
+        }
+    }
+}

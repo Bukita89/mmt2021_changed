@@ -63,6 +63,38 @@ $(function() {
     }
     /* image carousel end */
 
+    /* testimonials carousel */
+    if($('.template-testimonials-slider').length) {
+        $('.template-testimonials-slider').slick(
+            {
+                dots: false,
+                infinite: false,
+                arrows: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                nextArrow: '.testimonials__next',
+                prevArrow: '.testimonials__prev',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            }
+        )
+    }
+    /* testimonials carousel end */
+
     /* content cards start */
     if($('.template-cards-content-grid').length) {
         if($(window).width() < 1025) {

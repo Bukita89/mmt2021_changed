@@ -122,6 +122,145 @@
     }
 }
 
+@mixin  slider-arrows() {
+    .slick-arrow {
+        background: none;
+        position: absolute;
+        top: 0;
+        left: initial;
+        right: 0;
+        height: rem-calc(64);
+        width: rem-calc(64);
+        background-color: color('blue-900');
+        transition: background-color $tr/2, border $tr/2;
+        border: 1px solid transparent;
+
+        &.slick-prev {
+            right: rem-calc(65);
+
+            &:after {
+                left: 0;
+                right: initial;
+                transform: translate(100%, -50%) rotate(135deg);
+            }
+        }
+
+        &:before,
+        &:after {
+            pointer-events: none;
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: height $tr/2, right $tr/2, width $tr/2, background-color $tr/2, border $tr/2, transform $tr/2;
+        }
+
+        &:before {
+            width: rem-calc(33);
+            height: rem-calc(3);
+            background: color('blue');
+        }
+
+        &:after {
+            width: rem-calc(15);
+            height: rem-calc(15);
+            background: none;
+            transform: translate(15%, -50%) rotate(-45deg);
+            border-right: rem-calc(3) solid color('blue');
+            border-bottom: rem-calc(3) solid color('blue');
+        }
+
+        &:hover {
+            &:before {
+                width: rem-calc(41);
+            }
+
+            &:after {
+                transform: translate(30%, -50%) rotate(-45deg);
+            }
+
+            &.slick-prev {
+                &:after {
+                    left: 0;
+                    right: initial;
+                    transform: translate(80%, -50%) rotate(135deg);
+                }
+            }
+        }
+
+        &:active,
+        &:focus {
+            border: 1px solid color('blue');
+        }
+
+        &.slick-disabled {
+            pointer-events: none;
+            border: 1px solid transparent;
+
+            &:before {
+                background: color('grey');
+            }
+            &:after {
+                border-color: color('grey');
+            }
+        }
+
+        @include breakpoint(small only) {
+            position: relative;
+            transform: none;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: 0 !important;
+            display: inline-flex;
+            height: rem-calc(48);
+            width: rem-calc(48);
+
+
+            &.slick-prev {
+                &:after {
+                    transform: translate(100%, -50%) rotate(135deg);
+                }
+            }
+
+            &:before {
+                width: rem-calc(25);
+                height: rem-calc(2);
+            }
+
+            &:after {
+                width: rem-calc(10);
+                height: rem-calc(10);
+                transform: translate(15%, -50%) rotate(-45deg);
+                border-right: rem-calc(2) solid color('blue');
+                border-bottom: rem-calc(2) solid color('blue');
+            }
+
+            &:hover {
+                &:before {
+                    width: rem-calc(30);
+                }
+
+                &:after {
+                    transform: translate(30%, -50%) rotate(-45deg);
+                }
+
+                &.slick-prev {
+                    &:after {
+                        transform: translate(80%, -50%) rotate(135deg);
+                    }
+                }
+            }
+
+            & + * {
+                margin-top: rem-calc(24);
+            }
+        }
+    }
+}
+
 @mixin responsive-padding($direction: 'vert', $large: $base-padding, $base : 0.2, $important: 'false') {
     //by default we have:
     //20% decrease for medium
