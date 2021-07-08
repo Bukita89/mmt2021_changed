@@ -46,6 +46,10 @@ section.content-block.template-testimonials {
             flex-direction: column;
             justify-content: space-between;
 
+            @include breakpoint(small only) {
+                padding: rem-calc(32 30 48 30);
+            }
+
             &:before {
                 content: '';
                 display: block;
@@ -63,10 +67,14 @@ section.content-block.template-testimonials {
             .review {
                 @include typo('text');
                 margin-bottom: rem-calc(38);
+
+                @include breakpoint(small only) {
+                    margin-bottom: rem-calc(32);
+                }
             }
 
             .name {
-                @include typo('p-sm');
+                font-size: rem-calc(20);
                 font-weight: 600;
             }
         }
