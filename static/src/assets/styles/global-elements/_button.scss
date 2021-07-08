@@ -23,6 +23,10 @@
         background: color('blue-dark');
     }
 
+    &.large {
+        padding: rem-calc(10 42);
+    }
+
     &:active {
         clip-path: polygon(0% 30%, 15% 0%, 100% 0%, 100% 70%, 85% 100%, 0% 100%);
     }

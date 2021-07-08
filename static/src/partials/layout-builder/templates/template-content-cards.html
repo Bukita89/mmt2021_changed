@@ -19,6 +19,24 @@
     </div>
     {{/ifequal}}
 
+    {{#ifequal layout "stacked"}}
+    <div class="grid-x grid-margin-x align-center template-cards-content-stacked">
+        {{#each data}}
+            <div class="item">
+                <div class="img-wrapper">
+                    <img src="{{root}}{{img}}" alt="">
+                </div>
+
+                <div class="content">
+                    <h4 class="title">{{title}}</h4>
+                    <p class="description">{{description}}</p>
+                    <a href="{{root}}{{link}}" class="button large">{{button-text}}</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    {{/ifequal}}
+
 
 </div>
 {{/content-block}}
