@@ -95,6 +95,38 @@ $(function() {
     }
     /* testimonials carousel end */
 
+    /* testimonials carousel */
+    if($('.template-team-slider').length) {
+        $('.template-team-slider').slick(
+            {
+                dots: false,
+                infinite: false,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                nextArrow: '.team__next',
+                prevArrow: '.team__prev',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        },
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        },
+                    },
+                ],
+            }
+        )
+    }
+    /* testimonials carousel end */
+
     /* content cards start */
     if($('.template-cards-content-grid').length) {
         if($(window).width() < 1025) {

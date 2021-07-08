@@ -1,0 +1,92 @@
+section.content-block.template-team {
+    .team-top {
+        position: relative;
+
+        & + * {
+            margin-top: rem-calc($base-margin/2);
+
+            @include breakpoint(small only) {
+                margin-top: rem-calc(24);
+            }
+        }
+    }
+
+    @include slider-arrows;
+
+    .slick-arrow {
+        bottom: 0;
+        left: initial;
+        top: initial;
+        right: 0;
+        margin: 0 !important;
+
+        @include breakpoint(small only) {
+            margin-top: rem-calc(32) !important;
+        }
+
+        &.slick-prev {
+            @include breakpoint(small only) {
+                left: 0;
+                right: initial;
+            }
+        }
+    }
+
+
+    .slick-slide {
+
+        .item {
+            .name,
+            .description {
+                margin: 0;
+            }
+
+            .name {
+                @include typo('text');
+                font-weight: 300;
+
+                & + * {
+                    margin-top: rem-calc(2);
+                }
+            }
+
+            .description {
+                @include typo('h6');
+                font-weight: 300;
+            }
+
+            .img-wrapper {
+                overflow: hidden;
+                clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 16%);
+                height: rem-calc(282);
+
+                img,
+                svg {
+                    object-position: center center;
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                & + * {
+                    margin-top: rem-calc(16);
+                }
+            }
+        }
+    }
+
+    .slick-track
+    {
+        display: flex !important;
+    }
+
+    .slick-slide
+    {
+        height: inherit !important;
+
+        > div,
+        .item {
+            height: 100%;
+        }
+    }
+}

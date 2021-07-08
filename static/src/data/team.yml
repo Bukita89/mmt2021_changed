@@ -1,0 +1,33 @@
+items:
+    -
+        img: assets/images/cms/trainer-1.png
+        name: Trainer Name
+        description: Yoga, Strength Training
+    -
+        img: assets/images/cms/trainer-2.png
+        name: Trainer Name
+        description: Strength Training, Cross Training
+    -
+        img: assets/images/cms/trainer-3.png
+        name: Trainer Name
+        description: Strength Training, Cross Training, Nutrition
+    -
+        img: assets/images/cms/trainer-4.png
+        name: Trainer Name
+        description: Cross Training, Nutrition
+    -
+        img: assets/images/cms/trainer-1.png
+        name: Trainer Name
+        description: Yoga, Strength Training
+    -
+        img: assets/images/cms/trainer-2.png
+        name: Trainer Name
+        description: Strength Training, Cross Training
+    -
+        img: assets/images/cms/trainer-3.png
+        name: Trainer Name
+        description: Strength Training, Cross Training, Nutrition
+    -
+        img: assets/images/cms/trainer-4.png
+        name: Trainer Name
+        description: Cross Training, Nutrition
