@@ -50,21 +50,12 @@ section.content-block.template-content-cards {
             max-width: rem-calc(384);
 
             .img-wrapper {
+                @include imgWrapper;
                 max-height: rem-calc(241);
                 height: 100%;
-                clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
-                overflow: hidden;
 
                 @include breakpoint(small only) {
                     max-height: rem-calc(192);
-                }
-
-                img,
-                svg {
-                    object-fit: cover;
-                    object-position: center center;
-                    height: 100%;
-                    width: 100%;
                 }
             }
 

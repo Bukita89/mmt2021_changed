@@ -573,6 +573,19 @@
     height: 100%;
 }
 
+@mixin imgWrapper() {
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
+    overflow: hidden;
+
+    img,
+    svg {
+        object-fit: cover;
+        object-position: center center;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 @mixin closeButton($color: $black) {
     display: inline-block;
     width: rem-calc(20);

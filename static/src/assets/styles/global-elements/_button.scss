@@ -112,6 +112,8 @@
         border: 2px solid color('white');
         border-radius: rem-calc(24);
         clip-path: none !important;
+        white-space: nowrap;
+        width: auto;
 
         &:hover {
             background: color('grey');

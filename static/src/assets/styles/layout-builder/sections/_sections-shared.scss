@@ -11,6 +11,20 @@ section.content-block {
     }
 }
 
+.content {
+    > section {
+        &:first-child {
+            &:not(.hero-unit) {
+                margin-top: rem-calc(196);
+
+                @include breakpoint(small only) {
+                    margin-top: rem-calc(120);
+                }
+            }
+        }
+    }
+}
+
 section[class^="bg-"],
 section[class*="bg-"] {
     @include responsive-padding("vert");
