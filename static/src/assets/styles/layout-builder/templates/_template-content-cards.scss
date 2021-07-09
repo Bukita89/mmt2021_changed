@@ -53,6 +53,7 @@ section.content-block.template-content-cards {
                 @include imgWrapper;
                 max-height: rem-calc(241);
                 height: 100%;
+                position: relative;
 
                 @include breakpoint(small only) {
                     max-height: rem-calc(192);
@@ -112,6 +113,7 @@ section.content-block.template-content-cards {
             .img-wrapper {
                 clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
                 overflow: hidden;
+                position: relative;
 
                 @include breakpoint(medium up) {
                     height: 100%;
