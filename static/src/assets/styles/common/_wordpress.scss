@@ -1,7 +1,7 @@
 $img-margin: $module-margin / 2;
 .alignleft,
 .alignright,
-.alignnone, 
+.alignnone,
 .aligncenter {
   margin-left: auto;
   margin-right: auto;
@@ -17,7 +17,7 @@ $img-margin: $module-margin / 2;
   }
 }
 
-.alignnone, 
+.alignnone,
 .aligncenter {
   + p,
   p + & {
@@ -28,17 +28,18 @@ $img-margin: $module-margin / 2;
 @include breakpoint(medium) {
     .alignleft {
         float: left;
-        margin-right: rem-calc($img-margin);
-        margin-bottom: rem-calc($img-margin);
+        margin-right: rem-calc($img-margin) !important;
+        margin-bottom: rem-calc($img-margin) !important;
     }
+
     .alignright {
         float: right;
-        margin-left: rem-calc($img-margin);
-        margin-bottom: rem-calc($img-margin);
+        margin-left: rem-calc($img-margin) !important;
+        margin-bottom: rem-calc($img-margin) !important;
     }
 
     .alignnone {
       margin-left: 0;
       margin-right: 0;
-    }  
+    }
 }

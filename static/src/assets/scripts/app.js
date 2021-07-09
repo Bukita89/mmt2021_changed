@@ -36,10 +36,18 @@ $(function() {
         $('.hero-button-to-bottom').on('click', function (e) {
             e.preventDefault();
 
+            let excessSpacing;
+
+            if ($(window).width() < 1025) {
+                excessSpacing = 76;
+            } else {
+                excessSpacing = 96;
+            }
+
             if ($("body section.content-block").length) {
                 $([document.documentElement, document.body]).animate({
-                    scrollTop: $("body section.content-block").offset().top
-                }, 2000);
+                    scrollTop: $("body .hero-unit").outerHeight() - excessSpacing,
+                }, 1500);
             }
         })
     }
@@ -159,14 +167,21 @@ $(function() {
     }
     /* testimonials carousel end */
 
-    /* blog filters */
+    /* blog */
     if ($('.facet-radio-wrapper').length) {
         $('.facet-radio-wrapper .facetwp-radio').click(function () {
             $('.facet-radio-wrapper .facetwp-radio').removeClass('checked');
             $(this).addClass('checked');
         })
     }
-    /* blog filters end */
+
+    if ($('.blog-pagination__button').length) {
+        $('.blog-pagination__button').click(function () {
+            $('.blog-pagination__button').removeClass('active');
+            $(this).addClass('active');
+        })
+    }
+    /* blog end */
 
     /* content cards start */
     if($('.template-cards-content-grid').length) {

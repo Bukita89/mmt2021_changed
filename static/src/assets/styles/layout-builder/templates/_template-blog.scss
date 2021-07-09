@@ -216,8 +216,7 @@ section.content-block.template-blog {
             cursor: pointer;
             color: color('blue');
 
-            &:active,
-            &:focus {
+            &.active {
                 border: 1px solid color('blue');
             }
 

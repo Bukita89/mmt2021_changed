@@ -47,6 +47,10 @@ footer.site-footer {
     .footer-society {
         display: flex;
 
+        @include breakpoint(medium only) {
+            margin-top: rem-calc(16);
+        }
+
         li {
             height: rem-calc(48);
             width: rem-calc(48);
