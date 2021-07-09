@@ -159,6 +159,15 @@ $(function() {
     }
     /* testimonials carousel end */
 
+    /* blog filters */
+    if ($('.facet-radio-wrapper').length) {
+        $('.facet-radio-wrapper .facetwp-radio').click(function () {
+            $('.facet-radio-wrapper .facetwp-radio').removeClass('checked');
+            $(this).addClass('checked');
+        })
+    }
+    /* blog filters end */
+
     /* content cards start */
     if($('.template-cards-content-grid').length) {
         if($(window).width() < 1025) {

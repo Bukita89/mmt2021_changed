@@ -16,12 +16,27 @@
     </div>
 
     <div class="blog-filters-wrapper">
-        <p>Filter Categories</p>
+        <p class="show-for-medium">Filter Categories</p>
 
         <div class="blog-filters">
-            <button class="button outlined">Nutrition</button>
-            <button class="button outlined">Workouts</button>
-            <button class="button outlined">Health & Wellness</button>
+            <div class="facet-dropdown-wrapper show-for-small-only">
+                <div class="facetwp-facet facetwp-facet-resource_types facetwp-type-dropdown" data-name="resource_types" data-type="dropdown">
+                    <select class="facetwp-dropdown">
+                        <option value="">Filter Categories</option>
+                        <option value="article">Article</option>
+                        <option value="case-study">Case Study</option>
+                        <option value="video">Video</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="facet-radio-wrapper show-for-medium">
+                <div class="facetwp-facet facetwp-facet-resource_categories facetwp-type-radio" data-name="resource_categories" data-type="radio">
+                    <div class="facetwp-radio checked" data-value="all">Nutrition <span class="facetwp-counter">(1)</span></div>
+                    <div class="facetwp-radio" data-value="save-money">Workouts <span class="facetwp-counter">(2)</span></div>
+                    <div class="facetwp-radio" data-value="improve-security">Health & Wellness <span class="facetwp-counter">(3)</span></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -39,6 +54,14 @@
             </div>
         </div>
         {{/each}}
+    </div>
+
+    <div class="blog-pagination">
+        <button class="button-arrow prev disabled"></button>
+        <button class="blog-pagination__button">1</button>
+        <button class="blog-pagination__button">2</button>
+        <button class="blog-pagination__button">3</button>
+        <button class="button-arrow next"></button>
     </div>
 
 </div>

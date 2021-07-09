@@ -141,6 +141,87 @@
     }
 }
 
+.button-arrow {
+    background: none;
+    position: relative;
+    height: rem-calc(48);
+    width: rem-calc(48);
+    background-color: color('blue-900');
+    transition: background-color $tr/2, border $tr/2;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transform: none;
+    margin: 0;
+    display: inline-flex;
+
+    &.prev {
+        &:after {
+            left: 50%;
+            transform: translate(-120%, -50%) rotate(135deg);
+        }
+    }
+
+    &:before {
+        width: rem-calc(25);
+        height: rem-calc(2);
+        background: color('blue');
+    }
+
+    &:before,
+    &:after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: height $tr/2, right $tr/2, width $tr/2, background-color $tr/2, border $tr/2, transform $tr/2;
+    }
+
+    &:after {
+        background: none;
+        width: rem-calc(10);
+        height: rem-calc(10);
+        transform: translate(20%, -50%) rotate(-45deg);
+        border-right: rem-calc(2) solid color('blue');
+        border-bottom: rem-calc(2) solid color('blue');
+    }
+
+    &:hover {
+        &:before {
+            width: rem-calc(30);
+        }
+
+        &:after {
+            transform: translate(40%, -50%) rotate(-45deg);
+        }
+
+        &.prev {
+            &:after {
+                transform: translate(-150%, -50%) rotate(135deg);
+            }
+        }
+    }
+
+    &:active,
+    &:focus {
+        border: 1px solid color('blue');
+    }
+
+    &.disabled {
+        pointer-events: none;
+        border: 1px solid transparent;
+
+        &:before {
+            background: color('grey');
+        }
+
+        &:after {
+            border-color: color('grey');
+        }
+    }
+}
+
 .hero-button-to-bottom {
     height: rem-calc(64);
     width: rem-calc(64);
