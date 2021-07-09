@@ -23,6 +23,11 @@
   @include breakpoint(1395) {
     left: rem-calc(-40);
   }
+
+    @include ie() {
+        left: inherit;
+        right: -65px;
+    }
 }
 
 .slick-next {

@@ -15,9 +15,9 @@ section.content-block.template-testimonials {
 
         .item {
             background: none;
-            color: color('black-light');
+            color: color('white');
             clip-path: polygon(100% 0, 100% 83%, 73% 100%, 0 100%, 0 0);
-            background: color('grey');
+            background: color('white');
             position: relative;
             padding: rem-calc(28 32 32 32);
             display: flex !important;

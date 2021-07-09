@@ -47,6 +47,28 @@
     &.content-block {
         @include responsive-margin('top', 96);
     }
+
+    .template-testimonials-slider {
+        .item {
+            background: color('grey') !important;
+
+            .review,
+            .name {
+                color: color('black-light');
+            }
+        }
+    }
+
+    .template-testimonials-slider {
+        .item {
+            background: color('white') !important;
+
+            .review,
+            .name {
+                color: color('white');
+            }
+        }
+    }
 }
 
 .bg-light-grey {
@@ -61,6 +83,17 @@
         .subheadline,
         p {
             color: color('black-light');
+        }
+    }
+
+    .template-testimonials-slider {
+        .item {
+            background: color('grey') !important;
+
+            .review,
+            .name {
+                color: color('black-light');
+            }
         }
     }
 }

@@ -83,6 +83,10 @@ section.content-block.template-content-cards {
                 .button {
                     margin-top: auto;
                     width: fit-content;
+
+                    @include ie() {
+                        width: 100px;
+                    }
                 }
             }
         }
@@ -124,12 +128,22 @@ section.content-block.template-content-cards {
                     width: 100%;
                 }
 
+                @include ie() {
+                    margin-right: 0;
+                    max-width: rem-calc(600);
+                    width: 100%;
+                }
+
                 img,
                 svg {
                     object-fit: cover;
                     object-position: center center;
                     height: 100%;
                     width: rem-calc(793);
+
+                    @include ie() {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -165,6 +179,10 @@ section.content-block.template-content-cards {
                 .button {
                     margin-top: auto;
                     width: fit-content;
+
+                    @include ie() {
+                        width: rem-calc(240);
+                    }
                 }
             }
         }
