@@ -15,6 +15,7 @@ section.content-block.template-blog {
             .img-wrapper {
                 clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
                 overflow: hidden;
+                position: relative;
 
                 @include breakpoint(medium up) {
                     height: 100%;
