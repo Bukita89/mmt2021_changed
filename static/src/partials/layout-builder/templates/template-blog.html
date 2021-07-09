@@ -4,7 +4,7 @@
     <div class="grid-x grid-margin-x align-center template-blog-stacked">
         <div class="item">
             <div class="img-wrapper">
-                <a href="{{root}}single-post.html" class="cover-link"></a>
+                <a href="{{root}}single-post.html" class="cover-link"><span class="show-for-sr">blog post link</span></a>
                 <img src="{{root}}assets/images/cms/blog-lg-1.png" alt="">
             </div>
 
@@ -45,7 +45,7 @@
         {{#each template-blog.items}}
         <div class="cell">
             <div class="img-wrapper">
-                <a href="{{root}}single-post.html" class="cover-link"></a>
+                <a href="{{root}}single-post.html" class="cover-link"><span class="show-for-sr">blog post link</span></a>
                 <img src="{{root}}{{img}}" alt="">
             </div>
 
@@ -59,11 +59,11 @@
     </div>
 
     <div class="blog-pagination">
-        <button class="button-arrow prev disabled"></button>
+        <button class="button-arrow prev disabled"><span class="show-for-sr">button prev</span></button>
         <button class="blog-pagination__button active">1</button>
         <button class="blog-pagination__button">2</button>
         <button class="blog-pagination__button">3</button>
-        <button class="button-arrow next"></button>
+        <button class="button-arrow next"><span class="show-for-sr">button next</span></button>
     </div>
 
 </div>
