@@ -19,10 +19,6 @@
     font-weight: 600;
     white-space: nowrap;
 
-    @include ie() {
-        white-space: nowrap;
-    }
-
     &:hover {
         color: color('black-shade');
         background: color('blue-dark');

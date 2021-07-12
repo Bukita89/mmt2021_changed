@@ -74,7 +74,7 @@ section.content-block.template-blog {
 
                 .button {
                     width: fit-content;
-                    font-size: rem-calc(24)
+                    font-size: rem-calc(24);
                 }
             }
         }
@@ -102,20 +102,47 @@ section.content-block.template-blog {
 
             .facet-radio-wrapper {
                 .facetwp-radio {
-                    @extend .button;
-                    @extend .button.outlined;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: color('primary');
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: color $tr/2, background $tr/2, border-color $tr/2, clip-path $tr/2;
+                    @include font-size(20, 1.6);
+                    padding: rem-calc(10 26);
+                    height: rem-calc(48);
+                    position: relative;
+                    font-weight: 600;
+                    white-space: nowrap;
                     margin-right: rem-calc(24);
                     margin-bottom: rem-calc(24);
+                    background: none;
+                    color: color('white');
+                    border: 2px solid color('white');
+                    border-radius: rem-calc(24);
+                    clip-path: none !important;
+                    width: auto;
+
                     &:last-child {margin-right: 0;}
 
                     &:hover {
+                        background: color('grey');
+
                         &:not(.checked) {
                             color: color('white');
                         }
                     }
 
+                    &:before {
+                        border: none !important;
+                    }
+
                     &.checked {
-                        @extend .button.outlined:active;
+                        background: color('white');
+                        color: color('black-light');
                     }
 
                     .facetwp-counter {
