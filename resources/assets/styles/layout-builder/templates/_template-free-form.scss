@@ -1,0 +1,52 @@
+section.content-block.template-free-form {
+
+    &.layout-card {
+        max-width: rem-calc(790);
+        margin-left: auto;
+        margin-right: auto;
+        padding: rem-calc(64);
+        background: color('blue-900');
+        clip-path: polygon(100% 0, 100% 83%, 81% 100%, 0 100%, 0 0);
+
+        &.bg-grey {
+            background: color('grey');
+        }
+
+        &.bg-light-grey {
+            background: color('light-grey');
+            color: color('black');
+        }
+
+        @include breakpoint(medium down) {
+            padding: rem-calc(32 28 64 28);
+
+            .grid-container {
+                padding: 0;
+            }
+        }
+
+        form {
+            li.gfield {
+                input,
+                textarea {
+                    border: none !important;
+                }
+            }
+        }
+
+        header.module {
+            & + * {
+                margin-top: rem-calc(32);
+            }
+        }
+
+        .module.text-editor {
+            p {
+                @include typo('text');
+                font-weight: 300;
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+    }
+}
