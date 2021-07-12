@@ -120,7 +120,7 @@ class SSM extends Composer
             $response = array(
                 "theme_location" => "offcanvas_navigation",
                 "container" => FALSE,
-				"items_wrap" => '<ul class="vertical menu accordion-menu" data-accordion-menu>%3$s</ul>',
+				"items_wrap" => '<ul class="menu drilldown vertical" data-drilldown data-animate-height="true">%3$s</ul>',
                 "walker" => new Walker()
             );
 
