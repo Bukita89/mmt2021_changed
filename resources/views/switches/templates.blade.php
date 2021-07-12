@@ -49,7 +49,9 @@
 
             @php
 
-                $classes = $builder->getCustomClasses( "template", 'template-testimonials', '', $template );
+                $color_class = ( $template['option_background_color'] == 'bg-grey' ) ? ' bg-grey' : ' bg-light-grey';
+
+                $classes = $builder->getCustomClasses( "template", 'template-testimonials' . $color_class, '', $template );
                 $id = $builder->getCustomID( $template );
 
             @endphp
