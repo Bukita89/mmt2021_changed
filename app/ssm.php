@@ -88,6 +88,13 @@ add_filter('acf/fields/flexible_content/layout_title/name=templates', function( 
 }, 999, 4 );
 
 /**
+ * Disable Removing P tags on images
+ */
+add_filter( 'ssm_disable_image_tags', function( $content ) {
+    return false;
+}, 10 );
+
+/**
  * Register Objects
  */
 foreach ( glob( get_template_directory( __FILE__ ) . '/app/Objects/*.php') as $file) {
