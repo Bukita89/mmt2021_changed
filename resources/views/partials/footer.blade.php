@@ -1,71 +1,33 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
 
-	@if( !$is_landing_page )
+    <div class="grid-container">
 
-		<div class="grid-container">
+        <div class="grid-x grid-margin-x">
 
-			<div class="grid-x grid-margin-x">
+            <div class="cell small-12">
 
-				<div class="cell small-11 medium-4">
+                <div class="text-center d-flex align-items-center align-justify footer-content">
 
-					@if ( $logo = get_field( 'brand_logo', 'options' ) )
+					@php wp_nav_menu( $builder->getMenuArgs('footer_navigation') ); @endphp
 
-						<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="editable-svg logo">
-						
-					@endif
+                    <ul class="footer-society">
 
-				</div>
+						@if ( $facebook = get_field('facebook', 'options') )
+							<li><a target="_blank" href="{{ $facebook }}"><img src="@asset('images/facebook-logo.svg')" class="editable-svg" alt="Facebook"><span class="show-for-sr">facebook</span></a></li>
+						@endif
 
-			</div>
+						@if ( $instagram = get_field('instagram', 'options') )
+							<li><a target="_blank" href="{{ $instagram }}"><img src="@asset('images/instagram-logo.svg')" class="editable-svg" alt="Instagram"><span class="show-for-sr">instagram</span></a></li>
+						@endif
 
-		</div>
+                    </ul>
 
-	@endif
+                </div>
 
-	<div class="bottom">
+            </div>
 
-		<div class="grid-container">
+        </div>
 
-			<div class="grid-x grid-margin-x align-justify align-center">
-
-				@if ( $copyright = get_field('footer_copyright', 'options') )
-
-					<div class="cell shrink">{!! wpautop( $copyright ) !!}</div>
-
-				@endif
-
-				@if ( !$is_landing_page )
-
-					<div class="cell shrink">
-
-						<div class="socials">
-
-							<ul>
-
-								@if ( $facebook = get_field('facebook', 'options') )
-									<li><a target="_blank" class="facebook" href="{{ $facebook }}"></a></li>
-								@endif
-
-								@if ( $twitter = get_field('twitter', 'options') )
-									<li><a target="_blank" class="twitter" href="{{ $twitter }}"></a></li>
-								@endif
-
-								@if ( $instagram = get_field('instagram', 'options') )
-									<li><a target="_blank" class="instagram" href="{{ $instagram }}"><i class="fab fa-instagram"></i></a></li>
-								@endif
-
-							</ul>
-
-						</div>
-
-					</div>
-
-				@endif
-
-			</div>
-
-		</div>
-
-	</div>
+    </div>
 
 </footer>

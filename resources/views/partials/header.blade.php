@@ -1,12 +1,10 @@
 <header class="site-header">
 
-	<div class="grid-container">
+    <div class="grid-container navbar">
 
-		@php $alignment = $is_landing_page ? 'center' : 'justify'; @endphp
+        <div class="grid-x grid-margin-x align-middle align-{!! $alignment = $is_landing_page ? 'center' : ''; !!}">
 
-		<div class="grid-x grid-margin-x align-middle align-{{ $alignment }}">
-
-			<div class="brand cell shrink">
+            <div class="brand cell shrink" role="banner">
 
 				@php $link = $is_landing_page ? false : true; @endphp
 
@@ -15,7 +13,7 @@
 				@endif
 
 					@if ( $logo = get_field( 'brand_logo', 'options' ) )
-						<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="editable-svg logo">
+						<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="editable-svg">
 					@else
 						<span class="site-title">{{ $siteName }}</span>
 					@endif
@@ -24,22 +22,22 @@
 					</a>
 				@endif
 
-			</div>
-
+            </div>
+			
 			@if ( !$is_landing_page && has_nav_menu('primary_navigation') )
 
-				<nav class="primary-navigation cell shrink">
+				<nav class="primary-navigation cell shrink grid-x align-middle" role="navigation">
 
 					@php wp_nav_menu( $builder->getMenuArgs('primary_navigation') ); @endphp
-					
+						
 					@include( 'partials.hamburger' )
 
 				</nav>
 
 			@endif
 
-		</div>
+        </div>
 
-	</div>
-  
+    </div>
+
 </header>

@@ -1,24 +1,27 @@
 @if( !post_password_required() )
 
-    @if( $data['headline'] )
+    @if( $data['inner_headline'] )
 
         @php
 
             $args = array(
-				"option_background"	=> $data['option_background'],
-				"option_background_image" => $data['option_background_image'],
-				"option_background_color" => $data['option_background_color'],
 				"option_html_classes" => $data['option_html_classes'],
 				"option_html_id" => $data['option_html_id'],
 			);
 
             $classes = $builder->getCustomClasses( 'hero-unit', '', '', $args );
             $id = $builder->getCustomID( $args );
-            $style = ( $data['option_background'] == 'image' && !is_null( $data['option_background_image'] ) ) ? ' style="background-image: url(' . $data['option_background_image']['url'] . ')" ' : '';
         
         @endphp
 
-        @include( 'templates.hero-unit', ['classes' => $classes, 'id' => $id, 'style' => $style, 'headline' => $data['headline'], 'subheadline' => $data['subheadline'] ] )
+        @include( 'templates.hero-unit', [
+            'classes'   => $classes, 
+            'id'        => $id, 
+            'headline'  => $data['inner_headline'], 
+            'subheadline'     => $data['inner_short_description'],
+            'show_down_arrow' => $data['inner_show_down_arrow'],
+            'include_overlay_lines' => $data['inner_include_overlay']
+        ])
 
     @endif
 
