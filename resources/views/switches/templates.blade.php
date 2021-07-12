@@ -33,6 +33,30 @@
             @include( 'templates.call-to-action', [ 'classes' => $classes, 'id' => $id, 'style' => $style ] )
             @break
 
+        @case('team')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "template", 'template-team', '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.team', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
+        @case('testimonials')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "template", 'template-testimonials', '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.testimonials', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
     @endswitch
 
 @endforeach
