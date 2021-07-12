@@ -1,0 +1,72 @@
+brandname: Secret Stache Media
+logo: assets/images/cms/logo.svg
+copyright: Copyright &copy; Secret Stache Media 2018. All Rights Reserved.
+
+primary-navigation:
+  -
+    link: "services"
+    text: Services
+  -
+    link: "who-we-are"
+    text: Who We Are
+  -
+    link: "blog"
+    text: Blog
+  -
+    link: "services"
+    text: Start Moving
+    classes: button
+
+footer-navigation:
+  -
+    link: "services"
+    text: Services
+  -
+    link: "who-we-are"
+    text: Who We Are
+  -
+    link: "blog"
+    text: Blog
+  -
+    link: "services"
+    text: Start Moving
+
+content-cards:
+    -
+        img: assets/images/cms/item-img-2.png
+        title: Personal Training
+        description: Our personal trainers will work with you to set and meet your fitness goals, whether you want to improve your golf game or run your first marathon.
+        link: "#"
+        button-text: Elevate
+    -
+        img: assets/images/cms/item-img-4.png
+        title: Restorative Bodywork
+        description: Our licensed massage therapists and bodywork specialists aid in recovery using proven techniques including myofascial release, sports massage, and neuromuscular therapy.
+        link: "#"
+        button-text: Restore
+    -
+        img: assets/images/cms/item-img-3.png
+        title: Physical Therapy
+        description: All our physical therapists are board certified and come with at least X years of experience. We aid your recovery from minor and major injuries, surgery, and chronic pain.
+        link: "#"
+        button-text: Recover
+
+content-cards-stacked:
+    -
+        img: assets/images/cms/item-img-2.png
+        title: Personal Training
+        description: Whether you want to scale every 14er in Colorado, improve your golf swing, or simply build a solid foundation for lasting strength and health, our trainers work together to develop a comperehensive training strategy for you. We pair you with a personalized coach, but you can be assured our entire team is working for you to ensure you hit your goals.
+        link: "#"
+        button-text: Book Appointment
+    -
+        img: assets/images/cms/item-img-4.png
+        title: Restorative Bodywork
+        description: Our massage therapists and bodywork professionals provide the perfect complement to your grueling training sessions. They perform services ranging from Swedish massage to specialized neuromuscular therapy and myofascial release. Whether you want to unwind after a long week or recover from a grueling alphine adventure, our specialists are trained to provide holistic therapeutic relief.
+        link: "#"
+        button-text: Book Appointment
+    -
+        img: assets/images/cms/item-img-3.png
+        title: Physical Therapy
+        description: For clients looking to take their recovery to the next level, our onsite physical therapists work with your trainers and bodywork specialists to diagnose and treat any physical limitations that may hold you back. Our services range from helping treat sprains and chronic aches and pains to aiding in recovery from surgery and more serious injuries. We ar, you with the exercises, tools, and pain mitigation strategies to continue recovering long after your treatment sessions.
+        link: "#"
+        button-text: Book Appointment

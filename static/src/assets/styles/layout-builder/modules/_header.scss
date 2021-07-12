@@ -1,0 +1,27 @@
+header.module {
+    max-width: rem-calc(587);
+
+    & + * {
+        @include responsive-margin("top", $base-margin/2);
+    }
+
+    &.align-center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .headline {
+        & + * {
+            margin-top: rem-calc(16);
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    .subheadline {
+        @include typo('text');
+    }
+}

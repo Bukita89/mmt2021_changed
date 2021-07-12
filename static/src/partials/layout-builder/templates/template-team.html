@@ -1,0 +1,23 @@
+{{#> content-block template="team" classes=classes}}
+<div class="grid-container">
+    <div class="team-top">
+        {{> template-header headline=headline description=description moduleClasses="" }}
+        <button class="team__prev slick-prev"><span class="show-for-sr">button prev</span></button>
+        <button class="team__next slick-next"><span class="show-for-sr">button next</span></button>
+    </div>
+
+    <div class="template-team-slider">
+        {{#each data}}
+            <div class="item">
+                <div class="img-wrapper">
+                    <img src="{{root}}{{img}}" alt="">
+                </div>
+                <p class="name">{{name}}</p>
+                <p class="description">{{description}}</p>
+            </div>
+        {{/each}}
+    </div>
+
+
+</div>
+{{/content-block}}

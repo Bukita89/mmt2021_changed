@@ -1,0 +1,31 @@
+items:
+    -
+        img: assets/images/cms/blog-1.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Nutrition
+        link: "single-post.html"
+    -
+        img: assets/images/cms/blog-2.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Workouts
+        link: "single-post.html"
+    -
+        img: assets/images/cms/blog-3.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Health & Wellness
+        link: "single-post.html"
+    -
+        img: assets/images/cms/blog-4.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Workouts
+        link: "single-post.html"
+    -
+        img: assets/images/cms/blog-5.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Nutrition
+        link: "single-post.html"
+    -
+        img: assets/images/cms/blog-6.png
+        title: Secondary Post Headline Lorem Ipsum
+        preheadline: Workouts
+        link: "single-post.html"

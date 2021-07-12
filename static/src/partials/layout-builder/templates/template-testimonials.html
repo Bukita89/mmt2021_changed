@@ -1,0 +1,20 @@
+{{#> content-block template="testimonials" classes=classes}}
+<div class="grid-container">
+    <div class="testimonials-top">
+        {{> template-header headline=headline description=description moduleClasses="" }}
+        <button class="testimonials__prev slick-prev"><span class="show-for-sr">button prev</span></button>
+        <button class="testimonials__next slick-next"><span class="show-for-sr">button next</span></button>
+    </div>
+
+    <div class="template-testimonials-slider">
+        {{#each data}}
+            <div class="item">
+                <p class="review">{{review}}</p>
+                <p class="name">{{name}}</p>
+            </div>
+        {{/each}}
+    </div>
+
+
+</div>
+{{/content-block}}
