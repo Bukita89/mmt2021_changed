@@ -98,6 +98,10 @@ section.content-block.template-content-cards {
         @include breakpoint(small only) {
             margin-top: rem-calc(64);
         }
+
+        .template-header {
+            margin-bottom: rem-calc(128);
+        }
     }
 
     .template-cards-content-stacked {
