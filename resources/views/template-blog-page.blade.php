@@ -31,7 +31,7 @@
                         <div class="content">
 
                             @if ( $category = get_the_category( $data['blog_featured_post'] ) )
-                                <p class="preheadline">{!! $category[0]->name !!}</p>
+                                <p class="preheadline">{!! implode( ', ', array_column( $category, 'name' ) ) !!}</p>
                             @endif
 
                             <h2 class="title">{!! get_the_title( $data['blog_featured_post'] ) !!}</h2>
