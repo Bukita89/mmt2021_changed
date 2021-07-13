@@ -27,7 +27,17 @@ class ButtonDefaults {
             ])
                 ->addChoice('align-left', 'Left')
                 ->addChoice('align-center', 'Center')
-                ->addChoice('align-right', 'Right');
+                ->addChoice('align-right', 'Right')
+
+            ->addRadio('option_button_style', [
+                'label'		=> 'Style',
+                'layout'	=> 'horizontal',
+                'wrapper'	=> [
+                    'width'	=> '50'
+                ]
+            ])
+                ->addChoice('large', 'Default')
+                ->addChoice('simple', 'Simple');
 
         return $defaultButtonOptions;
 

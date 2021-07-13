@@ -25,12 +25,24 @@
 				@php
 
 					$wrapper_id = $builder->getCustomID( $module );
-					$wrapper_classes = $builder->getCustomClasses( "module", $module['buttons'][0]['option_button_alignment'], $key, $module );
+					$wrapper_classes = $builder->getCustomClasses( "module", $module['option_button_alignment'], $key, $module );
 
 				@endphp
 
-                @include( 'modules.button', [ 'buttons' => $module['buttons'], 'wrapper_id' => $wrapper_id, 'wrapper_classes' => $wrapper_classes ] )
+                @include( 'modules.button', [ 'buttons' => array( $module ), 'wrapper_id' => $wrapper_id, 'wrapper_classes' => $wrapper_classes, 'custom_classes' => ( $module['option_button_style'] == 'simple' ) ? ' arrow' : '' ] )
 
+            @break
+
+        @case( 'carousel' )
+
+				@php
+
+					$wrapper_id = $builder->getCustomID( $module );
+					$wrapper_classes = $builder->getCustomClasses( "module", '', '', $module );
+
+				@endphp
+
+            @include( 'modules.image-carousel', [ 'wrapper_id' => $wrapper_id, 'wrapper_classes' => $wrapper_classes ] )
             @break
 
         @case( 'image' )

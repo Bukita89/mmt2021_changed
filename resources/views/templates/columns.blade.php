@@ -1,46 +1,32 @@
 @if( $template['option_status'] )
 
-	<section {!! $id !!} {!! $classes !!} {!! $style !!} >
+	<section {!! $id !!} {!! $classes !!}>
 
-        @if( $template['include_template_header'] )
-
-			@include( 'partials.template-header', [ 'headline' => $template['template_headline'], 'subheadline' => $template['template_subheadline'] ] )
-
-        @endif
-
-        @if( !empty( $template['columns'] ) )
+        @if( !empty( $template['modules'] ) )
 
             <div class="grid-container">
 
-                <div class="grid-x grid-margin-x {{ "align-" . $template['option_x_alignment'] . " align-" . $template['option_y_alignment'] . " has-" . count( $template['columns'] ) . "-cols" }} ">
+				@if ( $template['include_template_header'] )
 
-                    @foreach( $template['columns'] as $key => $column )
+					@include('partials.template-header', [ 'headline' => $template['template_headline'], 'subheadline' => $template['template_short_description'] ] )
 
-						@php
-							$width = ($columns_width != null) ? explode( '_', $columns_width )[$key] : 12 / count( $template['columns'] );
-							$width = ( count( $template['columns'] ) == 1 && $width == 10 ) ? 12 : $width;
+				@endif
 
-							$id = ( $column['option_html_id'] ) ? 'id="' . $column['option_html_id'] . '"' : '';
-							$custom_classes = ( $column['option_html_classes'] ) ? " " . $column['option_html_classes'] : '';
-							$column_i = $key+1;
-							$columns_mobile_order = explode( '_', $template['option_columns_mobile_order'] );
-						@endphp
+				<div class="grid-x grid-margin-x has-1-cols {!! "align-" . $template['option_x_alignment'] !!}">
 
-                        <div {!! $id !!} class="cell small-11 medium-{{ $width }} medium-order-{!! $column_i !!} small-order-{!! $columns_mobile_order[$key] ?: 1 !!} {{ $custom_classes }}" >
+					<div class="cell medium-12">
 
-                            <div class="inner">
+						<div class="inner">
 
-								@if( !empty( $column['modules'] ) )
+							@if( !empty( $template['modules'] ) )
 
-									@include( 'switches.modules', ['modules' => $column['modules']] )
+								@include( 'switches.modules', [ 'modules' => $template['modules'] ] )
 
-								@endif
+							@endif
 
-							</div>
+						</div>
 
-                        </div>
-
-                    @endforeach
+					</div>
 
 				</div>
 

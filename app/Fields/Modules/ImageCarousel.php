@@ -12,7 +12,7 @@ class ImageCarousel {
 		/**
          * [Module] - Image Carousel
          */
-        $imageModule = new FieldsBuilder('image_carousel', [
+        $imageModule = new FieldsBuilder('carousel', [
             'title'	=> 'Image Carousel'
         ]);
 
