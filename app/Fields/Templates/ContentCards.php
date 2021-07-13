@@ -78,6 +78,10 @@ class ContentCards {
                 ])
                 ->conditional( 'data_source', '==', 'pages' )
 
+                    ->addImage('image', [
+                        'preview_size'  => 'medium'
+                    ])
+
                     ->addPostObject('page_id', [
                         'label'         => 'Choose Page',
                         'post_type'     => ['page'],
@@ -87,7 +91,6 @@ class ContentCards {
                     ->addRadio('button_type', [
                         'label'         => 'Button Type',
                         'layout'        => 'horizontal',
-                        'default_value' => 'tabs',
                     ])
                         ->addChoice('default', 'Default')
                         ->addChoice('simple', 'Simple')
@@ -103,14 +106,14 @@ class ContentCards {
                     'layout'        => 'block',
                     'min'           => 1,
                     'button_label'  => 'Add Service',
-                    'collapsed'     => 'choose_service',
+                    'collapsed'     => 'service_id',
                     'wrapper'       => [
                         'class'     => 'hide-label'
                     ]
                 ])
                 ->conditional( 'data_source', '==', 'services' )
 
-                    ->addPostObject('choose_service', [
+                    ->addPostObject('service_id', [
                         'label'         => 'Choose Service',
                         'post_type'     => ['mmt_service'],
                         'return_format' => 'id',
@@ -119,7 +122,6 @@ class ContentCards {
                     ->addRadio('button_type', [
                         'label'         => 'Button Type',
                         'layout'        => 'horizontal',
-                        'default_value' => 'tabs',
                     ])
                         ->addChoice('default', 'Default')
                         ->addChoice('simple', 'Simple')

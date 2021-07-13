@@ -57,6 +57,18 @@
             @include( 'templates.testimonials', [ 'classes' => $classes, 'id' => $id ] )
             @break
 
+        @case('content-cards')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "template", 'template-content-cards ' . $template['layout'], '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.content-cards', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
     @endswitch
 
 @endforeach
