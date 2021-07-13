@@ -16,6 +16,10 @@
         margin-right: auto;
     }
 
+     p.img-container {
+        max-width: 100%;
+     }
+
     img {
         &.size-large {
             max-width: 100%;

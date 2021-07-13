@@ -53,6 +53,14 @@ $(function() {
     }
     /* hero unit button to bottom end*/
 
+     /* text editor p > img */
+    if ($('.module.text-editor p > img').length) {
+        $('.module.text-editor p > img').each(function (index, item) {
+            $(item).parent().addClass('img-container');
+        })
+    }
+    /* text editor p > img  end */
+
     /* image carousel */
     if($('.images-carousel').length) {
         $('.images-carousel').slick(
