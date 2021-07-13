@@ -1,4 +1,4 @@
-<header class="template-header {!! $headline_size !!}{!! $header_classes !!}">
+<header class="template-header{!! $header_classes !!}">
 
     @if ( $headline )
         <h2 class="headline">{!! $headline !!}</h2>

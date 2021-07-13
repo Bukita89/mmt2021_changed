@@ -10,10 +10,7 @@
 
                     @if ( $template['include_template_header'] )
 
-                    @include('partials.template-header', [
-                        'headline'  	=> $template['template_headline'],
-                        'subheadline'   => $template['template_short_description'],
-                    ])
+                        @include('partials.template-header', [ 'headline' => $template['template_headline'], 'subheadline' => $template['template_short_description'] ] )
 
                     @endif
 
@@ -24,16 +21,16 @@
 
                 <div class="template-testimonials-slider">
 
-                    @foreach ( $testimonials as $item_id )
+                    @foreach ( $testimonials as $testimonial_id )
 
                         <div class="item">
 
-                            @if ( $quote = get_field( 'testimonial_quote', $item_id  ))
-                                <p class="review">{!! strip_tags($quote) !!}</p>
+                            @if ( $quote = get_field( 'testimonial_quote', $testimonial_id  ) )
+                                <p class="review">{!! '“' . trim( strip_tags( $quote ) ) . '”' !!}</p>
                             @endif
 
-                            @if ( $name = get_field( 'testimonial_citation_name', $item_id  ))
-                                <p class="name">{!! $name !!}</p>
+                            @if ( $citation_name = get_field( 'testimonial_citation_name', $testimonial_id  ) )
+                                <p class="name">{!! $citation_name !!}</p>
                             @endif
 
                         </div>

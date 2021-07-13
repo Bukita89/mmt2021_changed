@@ -74,18 +74,10 @@ class SSM extends Composer
                 break;
 
         }
-        switch ( $args['option_background'] ) {
+        switch ( $args['option_background_color'] ) {
 
-            case "color":
-                $response .= " bg-dark " . sanitize_html_class( $args['option_background_color'] );
-                break;
-
-            case "image":
-                $response .= " bg-image bg-dark";
-                break;
-
-            case "video":
-                $response .= " bg-video";
+            case "bg-light-grey":
+                $response .= " bg-light-grey";
                 break;
 
         }
