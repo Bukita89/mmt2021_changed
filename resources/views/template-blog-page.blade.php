@@ -106,7 +106,9 @@
 
                             <div class="content">
 
-                                <p class="preheadline"></p>
+                                @if ( $category = get_the_category( $data['blog_featured_post'] ) )
+                                    <p class="preheadline">{!! implode( ', ', array_column( $category, 'name' ) ) !!}</p>
+                                @endif
 
                                 <h4 class="title">{!! get_the_title( $post_id ) !!}</h4>
 
