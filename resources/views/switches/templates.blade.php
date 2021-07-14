@@ -54,6 +54,18 @@
             @include( 'templates.content-cards', [ 'classes' => $classes, 'id' => $id ] )
             @break
 
+        @case('instagram-feed')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "template", 'template-instagram-feed', '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.instagram-feed', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
     @endswitch
 
 @endforeach
