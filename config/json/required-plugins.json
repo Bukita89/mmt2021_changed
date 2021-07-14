@@ -66,6 +66,13 @@
         "force_activation": true
     },
     {
+        "name": "FacetWP",
+        "slug": "facetwp",
+        "source": "https://www.secretstache.com/required-plugins/facetwp.zip",
+        "required": true,
+        "force_activation": true
+    },
+    {
         "name": "Gravity Forms",
         "slug": "gravityforms",
         "source": "https://www.secretstache.com/required-plugins/gravityforms.zip",
