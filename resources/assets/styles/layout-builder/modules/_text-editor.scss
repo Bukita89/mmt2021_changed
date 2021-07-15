@@ -64,6 +64,26 @@
         }
     }
 
+    p + p.img-container {
+        img.alignnone {
+            @include responsive-margin('vert', 64);
+        }
+
+        img.aligncenter {
+            @include responsive-margin('vert', 32);
+        }
+    }
+
+    p {
+        &:last-child {
+            &.img-container {
+                img.alignnone {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     h1,
     h2,
     h3,

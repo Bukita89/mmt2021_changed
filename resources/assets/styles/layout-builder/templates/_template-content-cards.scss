@@ -49,6 +49,10 @@ section.content-block.template-content-cards {
             flex-direction: column;
             max-width: rem-calc(384);
 
+            @include breakpoint(small only) {
+                max-width: 100%;
+            }
+
             .img-wrapper {
                 @include imgWrapper;
                 max-height: rem-calc(241);
@@ -56,7 +60,14 @@ section.content-block.template-content-cards {
                 position: relative;
 
                 @include breakpoint(small only) {
-                    max-height: rem-calc(192);
+                    max-height: rem-calc(435);
+
+                    img {
+                        object-fit: cover;
+                        object-position: center center;
+                        height: 100%;
+                        width: 49.5625rem;
+                    }
                 }
             }
 

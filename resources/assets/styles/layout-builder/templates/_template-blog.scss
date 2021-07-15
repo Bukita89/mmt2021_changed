@@ -223,17 +223,23 @@ section.content-block.template-blog {
 
 
     .blog-pagination {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
+        .facetwp-facet {
+            margin: 0;
+        }
 
-        .blog-pagination__button,
+        .facetwp-page,
         .button-arrow {
             margin-right: rem-calc(4);
         }
 
-        .blog-pagination__button {
+        .facetwp-pager {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .facetwp-page {
             background: none;
             position: relative;
             height: rem-calc(48);
@@ -243,6 +249,9 @@ section.content-block.template-blog {
             border: 1px solid transparent;
             cursor: pointer;
             color: color('blue');
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
 
             &.active {
                 border: 1px solid color('blue');

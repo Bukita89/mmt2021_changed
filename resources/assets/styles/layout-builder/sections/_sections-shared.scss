@@ -1,3 +1,7 @@
+main.content {
+    overflow: hidden;
+}
+
 section.content-block {
     @include clearfix;
     @include responsive-margin("top");
