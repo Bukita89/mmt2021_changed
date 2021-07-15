@@ -6,6 +6,10 @@ $input-border: 1px solid color('black');
     .gform_wrapper {
         margin: 0;
 
+        input {
+            border: none !important;
+        }
+
         .gform_validation_errors {
             background: none;
             margin-bottom: rem-calc(24);
