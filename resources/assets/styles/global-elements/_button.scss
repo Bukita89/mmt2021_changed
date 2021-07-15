@@ -146,7 +146,8 @@
     }
 }
 
-.button-arrow {
+.facetwp-page.next,
+.facetwp-page.prev, {
     background: none;
     position: relative;
     height: rem-calc(48);
@@ -158,13 +159,7 @@
     transform: none;
     margin: 0;
     display: inline-flex;
-
-    &.prev {
-        &:after {
-            left: 50%;
-            transform: translate(-120%, -50%) rotate(135deg);
-        }
-    }
+    font-size: 0;
 
     &:before {
         width: rem-calc(25);
@@ -224,6 +219,13 @@
         &:after {
             border-color: color('grey');
         }
+    }
+}
+
+.facetwp-page.prev {
+    &:after {
+        left: 50%;
+        transform: translate(-120%, -50%) rotate(135deg);
     }
 }
 

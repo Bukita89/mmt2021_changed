@@ -3,11 +3,19 @@ section.content-block.template-instagram-feed {
         position: relative;
 
         & + * {
-            margin-top: rem-calc($base-margin/2);
+            margin-top: rem-calc($base-margin/2) !important;
 
             @include breakpoint(small only) {
-                margin-top: rem-calc(24);
+                margin-top: rem-calc(24) !important;
             }
+        }
+    }
+
+    .sbi {
+        &,
+        > div,
+        .sbi_item {
+            padding: 0 !important;
         }
     }
 
