@@ -6,6 +6,24 @@ $input-border: 1px solid color('black');
     .gform_wrapper {
         margin: 0;
 
+        .gform_validation_errors {
+            background: none;
+            margin-bottom: rem-calc(24);
+
+            .gform_submission_error {
+                color: color('white');
+            }
+        }
+
+        .validation_message {
+            background: none;
+            text-align: center;
+            margin-top: rem-calc(16) !important;
+            margin-bottom: rem-calc(16) !important;
+            font-size: rem-calc(16) !important;
+            color: white;
+        }
+
         .validation_error {
             width: 100%;
         }
@@ -47,7 +65,7 @@ $input-border: 1px solid color('black');
         }
 
         textarea {
-            height: rem-calc(144);
+            height: rem-calc(144) !important;
         }
 
         .gform_title {
@@ -59,20 +77,28 @@ $input-border: 1px solid color('black');
             margin: 0;
         }
 
-        ul.gform_fields {
+        .gform_fields {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
-            margin-left: rem-calc(-15) !important;
-            margin-right: rem-calc(-15) !important;
+            margin-left: rem-calc(-8) !important;
+            margin-right: rem-calc(-8) !important;
+
+            @include breakpoint(small only) {
+                margin: 0 !important;
+
+                .gfield {
+                    padding: 0 !important;
+                }
+            }
 
             &.top_label div.ginput_container {
                 margin: 0;
             }
 
-            li.gfield {
+            .gfield {
                 width: 100%;
                 margin-top: 0;
                 @include responsive-margin('bottom', 16, 0.2, 'true');
@@ -97,7 +123,7 @@ $input-border: 1px solid color('black');
 
                 @include breakpoint(large) {
                     &.half-width {
-                        width: 50%;
+                        width: 49%;
                     }
                 }
 
