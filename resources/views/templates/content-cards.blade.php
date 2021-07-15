@@ -47,11 +47,15 @@
 
                                         @if ( $template['data_source'] == 'pages' && $item['image'] )
 
-                                            <img src="{!! $item['image']['url'] !!}" alt="{!! get_the_title( $page_id ) !!}">
+                                            @php $image_url = ( $template['layout'] == 'layout-grid' ) ? $item['image']['sizes']['content-cards-grid-image'] : $item['image']['url']; @endphp
 
-                                        @elseif( ( $template['data_source'] == 'services' ) && ( $image = get_the_post_thumbnail_url( $page_id ) ) )
+                                            <img src="{!! $image_url !!}" alt="{!! get_the_title( $page_id ) !!}">
 
-                                            <img src="{!! $image !!}" alt="{!! get_the_title( $page_id ) !!}">
+                                        @elseif( ( $template['data_source'] == 'services' ) && ( !empty( get_the_post_thumbnail_url( $page_id ) ) ) )
+
+                                            @php $image_url = ( $template['layout'] == 'layout-grid' ) ? get_the_post_thumbnail_url( $page_id, 'content-cards-grid-image' ) : get_the_post_thumbnail_url( $page_id ); @endphp
+
+                                            <img src="{!! $image_url !!}" alt="{!! get_the_title( $page_id ) !!}">
 
                                         @endif
 
@@ -96,7 +100,11 @@
                                     @endif
 
                                     @if ( $item['image'] )
-                                        <img src="{!! $item['image']['url'] !!}" alt="{!! $item['image']['alt'] !!}">
+
+                                        @php $image_url = ( $template['layout'] == 'layout-grid' ) ? $item['image']['sizes']['content-cards-grid-image'] : $item['image']['url']; @endphp
+
+                                        <img src="{!! $image_url !!}" alt="{!! $item['image']['alt'] !!}">
+
                                     @endif
 
                                 </div>

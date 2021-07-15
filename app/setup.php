@@ -85,6 +85,11 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-relative-urls');
 
     /**
+     * Add custom image sizes
+     */
+    add_image_size('content-cards-grid-image', 385, 240, true );
+
+    /**
      * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */
