@@ -67,7 +67,7 @@ $(function() {
 
     /* image carousel */
     if ($('.images-carousel').length) {
-        $('.images-carousel-wrapper').each(function (index, item) {
+        $('.module.carousel').each(function (index, item) {
             let nextArrow = $(item).find($('.images-carousel__next'));
             let prevArrow = $(item).find($('.images-carousel__prev'));
 
