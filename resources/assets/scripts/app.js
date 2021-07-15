@@ -214,9 +214,9 @@ $(function() {
     /* blog end */
 
     /* content cards start */
-    if($('.template-cards-content-grid').length) {
+    if($('.template-content-cards.layout-grid .template-cards-content-grid').length) {
         if($(window).width() < 1025) {
-            $('.template-cards-content-grid').slick(
+            $('.template-content-cards.layout-grid .template-cards-content-grid').slick(
                 {
                     dots: true,
                     infinite: false,
