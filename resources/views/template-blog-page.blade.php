@@ -76,7 +76,7 @@
                 
                 $args = array(
                     'post_type' => 'post',
-                    'numberposts' => 1,
+                    'numberposts' => 6,
                     'status' 	=> 'publish',
                     'fields'    => 'ids',
                     'facetwp'   => true,
