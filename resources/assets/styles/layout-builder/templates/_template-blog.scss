@@ -20,7 +20,7 @@ section.content-block.template-blog {
                 @include breakpoint(medium up) {
                     height: 100%;
                     max-height: rem-calc(480);
-                    max-width: rem-calc(793);
+                    max-width: rem-calc(908);
                     width: 100%;
                 }
 
@@ -29,7 +29,7 @@ section.content-block.template-blog {
                     object-fit: cover;
                     object-position: center center;
                     height: 100%;
-                    width: rem-calc(793);
+                    width: rem-calc(908);
                 }
             }
 
@@ -42,7 +42,7 @@ section.content-block.template-blog {
                 justify-content: center;
 
                 @include breakpoint(medium up) {
-                    max-width: rem-calc(476);
+                    max-width: rem-calc(486);
                     min-height: rem-calc(480);
                     width: 100%;
                 }

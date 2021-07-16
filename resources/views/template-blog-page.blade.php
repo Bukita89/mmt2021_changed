@@ -16,7 +16,7 @@
 
                 <div class="grid-x grid-margin-x align-center template-blog-stacked">
 
-                    <div class="item">
+                    <div class="item cell">
 
                         <div class="img-wrapper">
 
@@ -49,7 +49,7 @@
             @if ( class_exists('FacetWP') )
 
                 <div class="blog-filters-wrapper">
-                    
+
                     <p class="show-for-medium">Filter Categories</p>
 
                     <div class="blog-filters">
@@ -73,7 +73,7 @@
             @endif
 
             @php
-                
+
                 $args = array(
                     'post_type' => 'post',
                     'numberposts' => 6,
@@ -91,11 +91,11 @@
                 <div class="grid-x grid-margin-x block-grid medium-up-2 large-up-3 align-center template-blog-items facetwp-template">
 
                     @foreach ( $posts as $post_id )
-                        
+
                         <div class="cell">
 
                             <div class="img-wrapper">
-                                
+
                                 <a href="{!! get_permalink( $post_id ) !!}" class="cover-link"><span class="show-for-sr">blog post link</span></a>
 
                                 @if ( $image = get_the_post_thumbnail_url( $post_id ) )
@@ -128,7 +128,7 @@
 
                 </div>
 
-            @else 
+            @else
 
                 <p class="text-center">Sorry, no posts were found.</p>
 

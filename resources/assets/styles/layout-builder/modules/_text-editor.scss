@@ -20,6 +20,46 @@
         max-width: 100%;
      }
 
+    ul {
+        & + ol {
+            @include responsive-margin('top', 32);
+        }
+    }
+
+    ol {
+        & + ul {
+            @include responsive-margin('top', 32);
+        }
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div {
+        & + ul,
+        & + ol {
+            @include responsive-margin('top', 48);
+        }
+    }
+
+    ul,
+    ol {
+        & + h1,
+        & + h2,
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h6,
+        & + div,
+        & + p {
+            @include responsive-margin('top', 48);
+        }
+    }
+
     img {
         &.size-large {
             max-width: 100%;
@@ -42,7 +82,8 @@
         }
     }
 
-    p {
+    p,
+    li {
         @include typo('text');
 
         & + & {
@@ -50,9 +91,14 @@
         }
     }
 
+    ol,
+    ul {
+        li + li {
+            margin-top: rem-calc(16);
+        }
+    }
+
     p {
-        &+ol,
-        &+ul,
         &+h1,
         &+h2,
         &+h3,
@@ -60,7 +106,7 @@
         &+h5,
         &+h6,
         &+div {
-            @include responsive-margin('top', 64);
+            @include responsive-margin('top', 24);
         }
     }
 
