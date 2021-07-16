@@ -14,7 +14,7 @@
 
 			<div class="grid-x grid-margin-x align-center template-single-post-stacked">
 
-				<div class="item">
+				<div class="item cell">
 
 					@if ( $image = get_the_post_thumbnail_url( $post_id ) )
 						<div class="img-wrapper"><img src="{!! $image !!}" alt="{!! get_the_title( $post_id ) !!}"></div>

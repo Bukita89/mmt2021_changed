@@ -8,13 +8,28 @@ section.content-block.template-free-form {
         background: color('blue-900');
         clip-path: polygon(100% 0, 100% 83%, 81% 100%, 0 100%, 0 0);
 
+        .module.form {
+            .gform_wrapper {
+                .gform_fields {
+                    .gfield {
+                        input,
+                        textarea {
+                            background: color('black-light');
+                            color: color('white');
+                            border: 1px solid color('black-light');
+                        }
+                    }
+                }
+            }
+        }
+
         &.bg-grey {
             background: color('grey');
         }
 
         &.bg-light-grey {
             background: color('light-grey');
-            color: color('black');
+            color: color('black-light');
         }
 
         @include breakpoint(medium down) {

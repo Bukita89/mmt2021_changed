@@ -96,6 +96,30 @@
             }
         }
     }
+
+    .module.text-editor {
+        * {
+            color: color('black-light');
+        }
+    }
+}
+
+.bg-grey,
+.bg-light-grey {
+    .module.form {
+        .gform_wrapper {
+            .gform_fields {
+                .gfield {
+                    input,
+                    textarea {
+                        background: color('black-light');
+                        color: color('white');
+                        border: 1px solid color('black-light');
+                    }
+                }
+            }
+        }
+    }
 }
 
 .bg-image {

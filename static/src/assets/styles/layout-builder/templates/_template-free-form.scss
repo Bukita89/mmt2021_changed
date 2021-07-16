@@ -14,7 +14,7 @@ section.content-block.template-free-form {
 
         &.bg-light-grey {
             background: color('light-grey');
-            color: color('black');
+            color: color('black-light');
         }
 
         @include breakpoint(medium down) {
