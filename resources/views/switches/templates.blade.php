@@ -66,6 +66,18 @@
             @include( 'templates.instagram-feed', [ 'classes' => $classes, 'id' => $id ] )
             @break
 
+        @case('appointment')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "template", 'template-appointment', '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.appointment', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
     @endswitch
 
 @endforeach

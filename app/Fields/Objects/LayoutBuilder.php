@@ -11,6 +11,7 @@ use App\Fields\Templates\ContentCards;
 use App\Fields\Templates\Testimonials;
 use App\Fields\Templates\Team;
 use App\Fields\Templates\InstagramFeed;
+use App\Fields\Templates\Appointment;
 
 class LayoutBuilder {
 
@@ -42,6 +43,8 @@ class LayoutBuilder {
                 ->addLayout(Team::getFields())
 
                 ->addLayout(InstagramFeed::getFields())
+
+                ->addLayout(Appointment::getFields())
 
 			->setLocation('post_type', '==', 'page')
 				->and('page_template', '!=', 'template-blog-page.blade.php')
