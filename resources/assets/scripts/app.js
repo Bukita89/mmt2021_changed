@@ -254,7 +254,7 @@ $(function() {
 	$(document).on('facetwp-loaded', function() {
         if (FWP.loaded) {
             $('html, body').animate({
-                scrollTop: $('.facetwp-template').offset().top - $('.site-header').innerHeight()
+                scrollTop: $('.facetwp-template').offset().top - $('.site-header').innerHeight() - 50
             }, 500);
         }
     });
