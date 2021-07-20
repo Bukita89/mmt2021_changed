@@ -142,3 +142,7 @@ function remove_yoast_columns( $columns ) {
     return $columns;
 
 }
+
+add_filter( 'wpseo_sitemap_exclude_author', function( $value ) {
+    return [];
+});
