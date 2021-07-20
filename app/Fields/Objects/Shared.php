@@ -188,7 +188,8 @@ class Shared {
 				->addChoice('fbq("track", "Purchase");', 'Made a Purchase')
 
 			->setLocation('post_type', '==', 'page')
-				->or('post_type', '==', 'post');
+				->or('post_type', '==', 'post')
+				->or('post_type', '==', 'mmt_service');
 
 		// Register Facebook Conversion Pixel
 		add_action('acf/init', function() use ($facebookConversionPixel) {
