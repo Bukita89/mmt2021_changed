@@ -41,10 +41,10 @@ class LayoutBuilder {
                 ->addLayout(Testimonials::getFields())
 
                 ->addLayout(Team::getFields())
+				
+				->addLayout(Appointment::getFields())
 
                 ->addLayout(InstagramFeed::getFields())
-
-                ->addLayout(Appointment::getFields())
 
 			->setLocation('post_type', '==', 'page')
 				->and('page_template', '!=', 'template-blog-page.blade.php')

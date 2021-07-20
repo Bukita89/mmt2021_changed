@@ -249,4 +249,13 @@ $(function() {
         $('body').removeClass('offcanvas-active');
     });
 
+
+    //facetwp
+	$(document).on('facetwp-loaded', function() {
+        if (FWP.loaded) {
+            $('html, body').animate({
+                scrollTop: $('.facetwp-template').offset().top - $('.site-header').innerHeight() - 50
+            }, 500);
+        }
+    });
 });

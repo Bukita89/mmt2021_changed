@@ -13,7 +13,7 @@ add_action( 'init', function() {
         "menu_icon"         => "dashicons-list-view",
         "menu_position"		=> 5,
         "supports" 			=> array( "title" ),
-        "show_in_menu"      => "mmt",
+        "show_in_menu"      => "edit.php?post_type=mmt_service",
         "has_archive"       => false,
         "public"            => false,
         "show_ui"           => true,

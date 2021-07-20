@@ -12,7 +12,7 @@ class Appointment {
 		 * Appointment Info
 		 */
 		$appointmentInfo = new FieldsBuilder('appointment_info', [
-            'title'         => 'Appointment Info',
+            'title'         => 'Embed HTML',
 			'position'      => 'acf_after_title',
             'menu_order'    => 1
 		]);
@@ -21,6 +21,9 @@ class Appointment {
 
             ->addField('appointment_html_editor', 'acf_code_field', [
 				'label'	=> 'HTML Editor',
+				'wrapper' => [
+					'class' => 'hide-label',
+				],
 				'mode' 	=> 'htmlmixed',
 				'theme'	=> 'monokai',
 			])
