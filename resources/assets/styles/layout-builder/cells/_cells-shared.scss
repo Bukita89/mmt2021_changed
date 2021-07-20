@@ -6,4 +6,13 @@ section.content-block {
             @include responsive-padding('all', $module-padding);
         }
     }
+
+    &.protected {
+        .component.default {
+            input {
+                width: 100%;
+                margin-bottom: rem-calc(25);
+            }
+        }
+    }
 }
