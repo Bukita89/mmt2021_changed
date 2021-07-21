@@ -94,7 +94,7 @@ class Shared {
                     'wrapper' => [
                         'class' => 'hide-label',
                     ],
-                    'message'   => 'Include Overlay',
+                    'message'   => 'Include Diagonal Lines',
                 ])
 
 				->addFields(HtmlAttributes::getFields())

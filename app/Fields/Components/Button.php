@@ -114,7 +114,7 @@ class Button {
 
                 ->addPostObject('button_page_id', [
                     'label'		=> 'Select a Page',
-                    'post_type' => ['page'],
+                    'post_type' => ['page', 'mmt_service', 'post'],
                     'wrapper'	=> [
                         'width'	=> '50'
                     ]
@@ -128,7 +128,7 @@ class Button {
 
                 ->addPostObject('button_page_id', [
                     'label'		=> 'Select a Page',
-                    'post_type' => ['page'],
+                    'post_type' => ['page', 'mmt_service', 'post'],
                     'wrapper'	=> [
                         'width'	=> '50'
                     ]
