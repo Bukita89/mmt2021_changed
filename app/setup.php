@@ -88,6 +88,7 @@ add_action('after_setup_theme', function () {
      * Add custom image sizes
      */
     add_image_size('content-cards-grid-image', 385, 240, true );
+    add_image_size('home-hero-image', 1015, 760, true );
 
     /**
      * Enable plugins to manage the document title
