@@ -45,14 +45,20 @@ section.hero-unit {
                 min-width: rem-calc(571);
                 left: 50%;
                 transform: translate(-50%, 0);
+                margin-top: rem-calc(16);
             }
 
             img,
             svg {
-                width: 100%;
+                width: auto;
                 height: 100%;
-                object-fit: contain;
                 object-position: right;
+                margin-left: auto;
+                display: block;
+
+                @include breakpoint(medium down) {
+                    width: 100%;
+                }
             }
 
             .hero-lines {
@@ -66,11 +72,11 @@ section.hero-unit {
                 svg {
                     object-fit: contain;
                     position: absolute;
-                    left: 20%;
+                    right: -20%;
                     top: 31%;
 
                     @include breakpoint(medium down) {
-                        left: 40%;
+                        right: -40%;
                         object-fit: cover;
                     }
                 }
@@ -140,6 +146,10 @@ section.hero-unit {
 
         .hero-unit-content {
             padding-top: rem-calc(210);
+
+            @include breakpoint(medium down) {
+                padding-top: rem-calc(64);
+            }
         }
     }
 }
