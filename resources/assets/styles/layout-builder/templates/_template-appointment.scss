@@ -308,6 +308,26 @@ section.content-block.template-appointment {
 
 
     div.healcode.appointments {
+        .healcode-date-label {
+            display: block;
+            @include responsive-type(26, 20);
+            color: white;
+            margin-top: rem-calc(30);
+            margin-bottom: rem-calc(20);
+
+            &:before {
+                content: '';
+                height: 1px;
+                background: #616264;
+                margin-left:auto;
+                margin-right: auto;
+                margin-bottom: rem-calc(30);
+                margin-top: rem-calc(20);
+                display: block;
+                width: 100%;
+            }
+        }
+
         .healcode-trainer {
             @include responsive-type(20, 16);
             display: flex;
@@ -315,18 +335,7 @@ section.content-block.template-appointment {
             margin-left: rem-calc(-12);
             margin-right: rem-calc(-12);
 
-            &:before {
-                content: '';
-                height: 1px;
-                background: #616264;
-                width: calc(100% - #{rem-calc(24)});
-                margin-left:auto;
-                margin-right: auto;
-                margin-bottom: rem-calc(30);
-                margin-top: rem-calc(20);
-
-            }
-      
+          
             > * {
                 margin: rem-calc(0 12);
             }
@@ -335,6 +344,7 @@ section.content-block.template-appointment {
         .trainer-label {
             margin-bottom: rem-calc(34);
             width: 100%;
+            @include responsive-type(20, 16);
         }
 
         .button.appointment {
