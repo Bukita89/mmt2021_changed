@@ -27,7 +27,22 @@ class TemplateHeader {
             ])
 
             ->addText('template_headline', [
-                'label'	=> 'Headline'
+                'label'	    => 'Headline',
+                'wrapper'   => [
+                    'width' => 75
+                ]
+            ])
+                ->conditional('include_template_header', '==', 1)
+
+            ->addSelect('template_text_alignment', [
+                'label'          => 'Text Alignment',
+                'wrapper'        => [
+                    'width'      => 25,
+                ],
+                'choices'        => [
+                    'align-left' => 'Left',
+                    'align-center' => 'Center',
+                ],
             ])
                 ->conditional('include_template_header', '==', 1)
 
