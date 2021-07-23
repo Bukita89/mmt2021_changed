@@ -8,7 +8,7 @@
                 <img src="@asset('images/hero-line-1.svg')" alt="Hero Lines">
             </div>
 
-            <img src="{!! $bg_image['sizes']['home-hero-unit-image'] !!}" alt="{!! $bg_image['alt'] !!}">
+            <img class="exclude-lazyload" src="{!! $bg_image['sizes']['home-hero-unit-image'] !!}" alt="{!! $bg_image['alt'] !!}">
 
         </div>
 
