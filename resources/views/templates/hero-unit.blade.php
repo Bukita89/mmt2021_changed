@@ -5,7 +5,7 @@
         <div class="overlay hero-image">
 
             <div class="overlay hero-lines">
-                <img src="@asset('images/hero-line-1.svg')" alt="Hero Lines">
+                <img class="exclude-lazyload" src="@asset('images/hero-line-1.svg')" alt="Hero Lines">
             </div>
 
             <img class="exclude-lazyload" src="{!! $bg_image['sizes']['home-hero-unit-image'] !!}" alt="{!! $bg_image['alt'] !!}">
@@ -16,7 +16,7 @@
 
         <div class="overlay hero-overlay-lines">
 
-            <img src="@asset('images/hero-line-2.svg')" alt="Hero Lines">
+            <img class="exclude-lazyload" src="@asset('images/hero-line-2.svg')" alt="Hero Lines">
 
         </div>
 
