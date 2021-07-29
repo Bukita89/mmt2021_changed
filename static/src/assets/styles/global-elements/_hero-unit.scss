@@ -4,6 +4,11 @@ section.hero-unit {
     align-items: center;
     background: #24282f;
 
+    @include ie() {
+        overflow: hidden;
+        height: rem-calc(637);
+    }
+
     @include breakpoint(large) {
         min-height: rem-calc(637);
     }
@@ -136,6 +141,11 @@ section.hero-unit {
 
         @include breakpoint(large) {
             min-height: rem-calc(757);
+        }
+
+        @include ie() {
+            overflow: hidden;
+            height: rem-calc(757);
         }
 
         .hero-unit-content {
