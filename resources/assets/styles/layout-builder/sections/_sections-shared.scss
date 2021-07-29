@@ -8,6 +8,10 @@ section.content-block {
     position: relative;
     z-index: 1;
 
+    @include ie() {
+        overflow: hidden !important;
+    }
+
     @include breakpoint(small only) {
         .grid-x .cell.small-order-1 {
             @include responsive-margin("bottom", $module-margin);
