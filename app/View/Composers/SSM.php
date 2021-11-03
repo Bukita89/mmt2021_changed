@@ -184,7 +184,7 @@ class SSM extends Composer
 
         $pieces = explode(" ", $number );
 
-        $formatted = "(" . $pieces[0] . ") " . $pieces[1];
+        $formatted = $pieces[0] . "-" . $pieces[1];
         $formatted .= ( isset( $pieces[2] ) ) ? $pieces[2] : "";
         $formatted .= ( isset( $pieces[3] ) ) ? $pieces[3] : "";
 
