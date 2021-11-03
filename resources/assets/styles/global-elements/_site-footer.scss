@@ -41,6 +41,17 @@ footer.site-footer {
                     flex-direction: column;
                 }
             }
+
+            @include breakpoint(medium){
+                a {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+    
+                li:not(:last-child) {
+                    margin-right: rem-calc(32);
+                }
+            }
         }
     }
 
@@ -88,6 +99,21 @@ footer.site-footer {
             path {
                 fill: color('white');
             }
+        }
+    }
+
+    .contacts-bar {
+        font-size: rem-calc(20);
+        padding-bottom: rem-calc(30);
+        margin-bottom: rem-calc(20);
+        border-bottom: 1px solid #616264;
+    }
+
+    .phone-number {
+        margin-top: rem-calc(30);
+
+        a {
+            --webkit-appearance: none;
         }
     }
 }
