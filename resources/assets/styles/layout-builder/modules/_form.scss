@@ -68,6 +68,12 @@ $input-border: 1px solid color('black');
             padding-right: 1rem;
         }
 
+        input[type="submit"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
         textarea {
             height: rem-calc(144) !important;
             border: none !important;
@@ -324,10 +330,13 @@ $input-border: 1px solid color('black');
             input[type=submit] {
                 margin: 0;
                 width: auto;
-                line-height: initial;
-                min-height: initial;
+                line-height: initial !important;
+                min-height: initial !important;
                 text-align: center;
                 cursor: pointer;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
             }
         }
 
@@ -412,3 +421,4 @@ $input-border: 1px solid color('black');
         }
     }
 }
+

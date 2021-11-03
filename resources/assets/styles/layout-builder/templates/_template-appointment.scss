@@ -382,4 +382,124 @@ section.content-block.template-appointment {
         }
     }
 
+    .healcode.registration {
+        .healcode-registration-promo-text {
+            @include typo('h3');
+            margin-bottom: rem-calc(40);
+        }
+    }
+
+    div.healcode .hc_registration {
+
+        .hc-registration-field {
+            margin-bottom: rem-calc(16);
+
+            + .hc-label {
+                margin-top: rem-calc(40);
+            }
+        }
+
+        input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type='file']),
+        select,
+        textarea {
+            width: 100%;
+            box-shadow: none;
+            position: relative;
+            margin: 0;
+            padding: $input-paddings;
+            height: $input-height;
+            background: color('blue-900');
+            color: color('white');
+            border: 1px solid color('blue-900');
+            font-size: rem-calc(20);
+            font-weight: 500;
+
+            &::placeholder {
+                color: inherit;
+                font-weight: 500;
+            }
+
+            &:focus {
+                // remove placeholder on input :focus by default
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            outline: none;
+            background-image: svg-uri('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 18.6 9.7" style="enable-background:new 0 0 18.6 9.7;" xml:space="preserve"><path d="M9.6,9.7c-0.3,0-0.7-0.1-1-0.3L0.5,2.7c-0.6-0.5-0.7-1.5-0.2-2.1c0.5-0.6,1.5-0.7,2.1-0.2l7.1,5.9l6.5-5.9 c0.6-0.6,1.6-0.5,2.1,0.1c0.6,0.6,0.5,1.6-0.1,2.1l-7.5,6.7C10.3,9.6,10,9.7,9.6,9.7z" fill="#fff"/></svg>');
+            background-origin: content-box;
+            background-position: right 0 center;
+            background-repeat: no-repeat;
+            background-size: 9px 6px;
+            padding-right: 1rem;
+        }
+
+        textarea {
+            height: rem-calc(144) !important;
+            border: none !important;
+        }
+
+        .hc-label {
+            display: block;
+            font-size: rem-calc(20);
+            text-align: left;
+            font-weight: bold;
+            margin: rem-calc(0 0 10);
+            opacity: 0.5;
+        }
+
+        .note {
+            font-size: rem-calc(12);
+            margin-top: rem-calc(10);
+        }
+
+        .hc-prospect-comment + div {
+            margin-top: rem-calc(40);
+            font-size: rem-calc(16);
+    
+            .hc-registration-field {
+                margin-top: rem-calc(10);
+                font-size: rem-calc(20);
+
+                input {
+                    width: rem-calc(20);
+                }
+            }
+
+            > div {
+                display: block;
+                font-size: rem-calc(20);
+                text-align: left;
+                font-weight: bold;
+                margin: rem-calc(0 0 10);
+                opacity: 0.5;
+            }
+        }
+
+        [type="submit"] {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .hc-actions {
+            margin-top: rem-calc(40);
+        }
+
+        .parsley-errors-list.filled {
+            margin-top: rem-calc(10);
+            font-size: rem-calc(14);
+        }
+
+    }
+
+    .hc-privacy-footer {
+        display: none;
+    }
 }
