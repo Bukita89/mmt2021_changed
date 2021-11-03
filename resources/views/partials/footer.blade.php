@@ -3,24 +3,35 @@
     <div class="grid-container">
 
         <div class="contacts-bar">
+
             <div class="grid-x grid-margin-x has-2-cols justify-content-between">
+
                 @if ( $opening_hours = get_field( 'opening_hours', 'options' ) )
+
                     <div class="cell medium-shrink">
+
                         <p>Hours:</p>
+
                         <div class="opening-hours"><p>{!! $opening_hours !!}</p></div>
+                        
                     </div>
+
                 @endif
 
                 <div class="cell medium-shrink">
+
                     @if ( $physical_address = get_field( 'physical_address', 'options' ) )
-                        <div class="address"><p>{!! $builder->getAddress( $physical_address ) !!}</p></div>
+                        <div class="address"><p><a target="_blank" href="https://maps.google.com/?q={!! $builder->getMapAddress( $physical_address ) !!}">{!! $builder->getAddress( $physical_address ) !!}</a></p></div>
                     @endif
 
                     @if ( $phone_number = get_field( 'primary_phone_number', 'options' ) )
                         <div class="phone-number"><a href="tel:{!! $phone_number['e164'] !!}">{!! $builder->getPhoneNumber( $phone_number['national'] ) !!}</a></div>
                     @endif
+
                 </div>
+
             </div>
+
         </div>
       
         <div class="grid-x grid-margin-x">
