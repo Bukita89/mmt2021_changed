@@ -24,7 +24,7 @@
 
                         <div class="item">
 
-                            @if ( $img = get_field( 'dance_image', $$dancestyle_id ) )
+                            @if ( $img = get_field( 'dance_image', $dancestyle_id ) )
                                 <div class="img-wrapper"><img src="{!! $img['url'] !!}" alt="{!! $img['alt'] !!}"></div>
                             @endif
 
