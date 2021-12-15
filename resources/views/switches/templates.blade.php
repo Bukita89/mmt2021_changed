@@ -30,6 +30,18 @@
             @include( 'templates.team', [ 'classes' => $classes, 'id' => $id ] )
             @break
 
+        @case('dancestyle')
+
+            @php
+
+                $classes = $builder->getCustomClasses( "dancestyle", 'template-dancestyle', '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.dancestyle', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
         @case('testimonials')
 
             @php

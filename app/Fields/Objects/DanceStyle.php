@@ -25,6 +25,11 @@ class DanceStyle {
             ->addWysiwyg('dance_description', [
                 'label'    => 'Description',
             ])
+			
+			->addRelationship('related_team', [
+				'label' => 'Relationship Field',
+				'post_type' => 'mmt_team_member',
+			])
 
 			->setLocation('post_type', '==', 'mmt_dancestyle');
 
