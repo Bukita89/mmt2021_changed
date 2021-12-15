@@ -34,7 +34,7 @@
 
             @php
 
-                $classes = $builder->getCustomClasses( "dancestyle", 'template-dancestyle', '', $template );
+                $classes = $builder->getCustomClasses( "template", 'template-dancestyle', '', $template );
                 $id = $builder->getCustomID( $template );
 
             @endphp
