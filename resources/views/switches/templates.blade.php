@@ -18,6 +18,20 @@
             @include( 'templates.columns', [ 'classes' => $classes, 'id' => $id ] )
             @break
 
+        @case('block-grid')
+
+            @php
+
+                $layout_card = ( $template['layout'] == 'layout-thin-card' ) ? ' layout-card' : '';
+
+                $classes = $builder->getCustomClasses( "template", 'template-block-grid' . $layout_card, '', $template );
+                $id = $builder->getCustomID( $template );
+
+            @endphp
+
+            @include( 'templates.block-grid', [ 'classes' => $classes, 'id' => $id ] )
+            @break
+
         @case('team')
 
             @php

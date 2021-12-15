@@ -10,6 +10,7 @@ use App\Fields\Templates\SplitContent;
 use App\Fields\Templates\ContentCards;
 use App\Fields\Templates\Testimonials;
 use App\Fields\Templates\Team;
+use App\Fields\Templates\DanceStyle;
 use App\Fields\Templates\InstagramFeed;
 use App\Fields\Templates\Appointment;
 
@@ -36,11 +37,15 @@ class LayoutBuilder {
 
                 ->addLayout(Columns::getFields())
 
+				->addLayout(BlockGrid::getFields())
+
                 ->addLayout(ContentCards::getFields())
 
                 ->addLayout(Testimonials::getFields())
 
                 ->addLayout(Team::getFields())
+
+				->addLayout(DanceStyle::getFields())
 				
 				->addLayout(Appointment::getFields())
 

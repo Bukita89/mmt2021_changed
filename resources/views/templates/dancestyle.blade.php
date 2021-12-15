@@ -14,8 +14,7 @@
 
                     @endif
 
-                    <button class="dancestyle__prev slick-prev"><span class="show-for-sr">button prev</span></button>
-                    <button class="dancestyle__next slick-next"><span class="show-for-sr">button next</span></button>
+                   
 
                 </div>
 
@@ -29,7 +28,7 @@
                             @endif
 
                             @if ( $name = get_the_title( $dancestyle_id ))
-                                <p class="name">{!! $name !!}</p>
+                                <p class="name"><a href="{!! get_permalink($dancestyle_id) !!}">{!! $name !!}</a></p>
                             @endif
 
                             @if ( $dance_description = get_field( 'dance_description', $dancestyle_id ) )

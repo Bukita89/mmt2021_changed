@@ -37,7 +37,7 @@ class SSM extends Composer
     public function getBuilder() {
         return $this;
     }
-
+    //show custom ID for the content block
     public static function getCustomID( $args )
     {
 
@@ -49,7 +49,7 @@ class SSM extends Composer
         return $response;
 
     }
-
+    //show default and custom classes for the content block
     public static function getCustomClasses( $context, $custom_classes = null, $column_index, $args )
     {
 
